@@ -1,0 +1,20 @@
+[overrides]
+tls-disabled-mac = MD5
+insecure-sig = RSA-MD5
+insecure-sig = DSA-SHA1
+insecure-sig = DSA-SHA224
+insecure-sig = DSA-SHA256
+insecure-sig = DSA-SHA384
+insecure-sig = DSA-SHA512
+tls-disabled-cipher = CAMELLIA-256-GCM
+tls-disabled-cipher = CAMELLIA-128-GCM
+tls-disabled-cipher = CAMELLIA-256-CBC
+tls-disabled-cipher = CAMELLIA-128-CBC
+tls-disabled-cipher = 3DES-CBC
+tls-disabled-cipher = ARCFOUR-128
+tls-disabled-kx = DHE-DSS
+disabled-version = SSL3.0
+min-verification-profile = low
+
+[priorities]
+SYSTEM=NORMAL

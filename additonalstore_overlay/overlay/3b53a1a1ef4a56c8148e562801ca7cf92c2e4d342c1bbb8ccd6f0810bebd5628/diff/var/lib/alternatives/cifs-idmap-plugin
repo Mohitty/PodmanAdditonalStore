@@ -1,0 +1,5 @@
+auto
+/etc/cifs-utils/idmap-plugin
+
+/usr/lib64/cifs-utils/cifs_idmap_sss.so
+20

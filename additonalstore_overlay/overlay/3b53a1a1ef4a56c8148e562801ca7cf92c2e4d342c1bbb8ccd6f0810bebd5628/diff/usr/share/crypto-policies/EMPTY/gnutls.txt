@@ -1,0 +1,8 @@
+[overrides]
+insecure-sig-for-cert = rsa-sha1
+insecure-sig-for-cert = dsa-sha1
+insecure-sig-for-cert = ecdsa-sha1
+min-verification-profile = very_weak
+
+[priorities]
+SYSTEM=NORMAL

@@ -1,0 +1,18 @@
+Removed /etc/systemd/system/timers.target.wants/dnf-makecache.timer.
+Created symlink /etc/systemd/system/systemd-remount-fs.service -> /dev/null.
+Created symlink /etc/systemd/system/dev-hugepages.mount -> /dev/null.
+Created symlink /etc/systemd/system/sys-fs-fuse-connections.mount -> /dev/null.
+Created symlink /etc/systemd/system/systemd-logind.service -> /dev/null.
+Created symlink /etc/systemd/system/getty.target -> /dev/null.
+Created symlink /etc/systemd/system/console-getty.service -> /dev/null.
+removed directory '/var/cache/dnf'
+removed '/var/cache/ldconfig/aux-cache'
+removed directory '/var/cache/ldconfig'
+removed directory '/var/cache/private'
+removed '/var/log/README'
+removed '/var/log/btmp'
+removed directory '/var/log/journal'
+removed '/var/log/lastlog'
+removed directory '/var/log/private'
+removed '/var/log/tallylog'
+removed '/var/log/wtmp'
