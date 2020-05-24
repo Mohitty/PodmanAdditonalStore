@@ -1,0 +1,744 @@
+05:46:40,863 INF packaging: setting DNF platform id to: platform:f31
+05:46:40,866 DBG packaging: Dnf configuration:
+[main]
+assumeno = 0
+assumeyes = 0
+autocheck_running_kernel = 1
+bandwidth = 0
+best = 0
+bugtracker_url = https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=dnf
+cachedir = /tmp/dnf.cache
+cacheonly = 0
+check_config_file_age = 1
+clean_requirements_on_remove = 1
+color = auto
+color_list_available_downgrade = dim,cyan
+color_list_available_install = normal
+color_list_available_reinstall = bold,underline,green
+color_list_available_upgrade = bold,blue
+color_list_installed_extra = bold,red
+color_list_installed_newer = bold,yellow
+color_list_installed_older = bold
+color_list_installed_reinstall = normal
+color_search_match = bold
+color_update_installed = normal
+color_update_local = bold
+color_update_remote = normal
+config_file_path = /etc/dnf/dnf.conf
+countme = 0
+debug_solver = 0
+debuglevel = 2
+defaultyes = 0
+deltarpm = 1
+deltarpm_percentage = 75
+disable_excludes = 
+diskspacecheck = 1
+enabled = 1
+enablegroups = 1
+errorlevel = 3
+exclude = 
+excludepkgs = 
+exit_on_lock = 0
+fastestmirror = 0
+gpgcheck = 0
+gpgkey_dns_verification = 0
+group_package_types = mandatory, default, conditional
+history_list_view = commands
+history_record = 1
+history_record_packages = dnf, rpm
+ignorearch = 0
+includepkgs = 
+install_weak_deps = 0
+installonly_limit = 3
+installonlypkgs = kernel, kernel-PAE, installonlypkg(kernel), installonlypkg(kernel-module), installonlypkg(vm), multiversion(kernel)
+installroot = /mnt/sysroot
+ip_resolve = whatever
+keepcache = 0
+localpkg_gpgcheck = 0
+log_rotate = 4
+log_size = 1048576
+logdir = /tmp/
+max_parallel_downloads = 3
+metadata_expire = 172800
+metadata_timer_sync = 10800
+minrate = 1000
+module_platform_id = platform:f31
+multilib_policy = best
+obsoletes = 1
+password = 
+persistdir = /mnt/sysroot/var/lib/dnf
+pluginconfpath = /tmp/dnf.pluginconf
+pluginpath = /usr/lib/python3.7/site-packages/dnf-plugins
+plugins = 1
+protected_packages = dnf, systemd, systemd-udev, dnf
+proxy = 
+proxy_auth_method = any
+recent = 7
+repo_gpgcheck = 0
+reposdir = /etc/yum.repos.d, /etc/anaconda.repos.d, /tmp/updates/anaconda.repos.d, /tmp/product/anaconda.repos.d
+reset_nice = 1
+retries = 10
+rpmverbosity = info
+showdupesfromrepos = 0
+skip_broken = 0
+skip_if_unavailable = 0
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = 1
+strict = 1
+system_cachedir = /var/cache/dnf
+throttle = 0
+timeout = 30
+transformdb = 1
+tsflags = 
+upgrade_group_objects_upgrade = 1
+user_agent = libdnf/0.35.3 (Fedora 31; generic; Linux.x86_64)
+username = 
+varsdir = /etc/dnf/vars, /etc/yum/vars
+zchunk = 1
+
+05:46:42,069 INF packaging: configuring base repo
+05:46:42,080 DBG dnf: Unknown configuration value: failovermethod=priority in /etc/anaconda.repos.d/fedora-updates-modular.repo; Configuration: OptionBinding with id "failovermethod" does not exist
+05:46:42,081 DBG dnf: Unknown configuration value: failovermethod=priority in /etc/anaconda.repos.d/fedora-updates-modular.repo; Configuration: OptionBinding with id "failovermethod" does not exist
+05:46:42,082 DBG dnf: Unknown configuration value: failovermethod=priority in /etc/anaconda.repos.d/fedora-updates-modular.repo; Configuration: OptionBinding with id "failovermethod" does not exist
+05:46:42,088 INF packaging: Enabled 'updates'
+05:46:42,088 INF packaging: Enabled 'updates-modular'
+05:46:42,088 INF packaging: Disabled 'updates-testing'
+05:46:42,089 INF packaging: Disabled 'updates-testing-modular'
+05:46:42,090 INF packaging: Trying to download '.treeinfo'
+05:46:42,163 DBG packaging: Retrieved '.treeinfo' from https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/
+05:46:42,170 DBG packaging: No base repository found in treeinfo file. Using installation tree root.
+05:46:42,170 DBG packaging: releasever from https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/ is 31
+05:46:42,171 INF packaging: added repo: 'anaconda' - https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/
+05:46:42,189 DBG dnf: repo: downloading from remote: anaconda
+05:46:47,432 INF packaging: enabled repo: 'anaconda' - ['https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/'] and got repomd
+05:46:47,433 DBG packaging: repo koji-override-0: mirrorlist None, baseurl https://kojipkgs.fedoraproject.org/compose/updates/f31-updates/compose/Everything/x86_64/os/, metalink False
+05:46:47,434 INF packaging: added repo: 'koji-override-0' - https://kojipkgs.fedoraproject.org/compose/updates/f31-updates/compose/Everything/x86_64/os/
+05:46:47,434 DBG packaging: repo koji-override-1: mirrorlist None, baseurl https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/, metalink False
+05:46:47,434 INF packaging: added repo: 'koji-override-1' - https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/
+05:46:47,435 DBG dnf: repo: downloading from remote: koji-override-0
+05:46:49,268 INF packaging: enabled repo: 'koji-override-0' - ['https://kojipkgs.fedoraproject.org/compose/updates/f31-updates/compose/Everything/x86_64/os/'] and got repomd
+05:46:49,269 DBG dnf: repo: downloading from remote: koji-override-1
+05:46:51,312 INF packaging: enabled repo: 'koji-override-1' - ['https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/'] and got repomd
+05:46:51,313 DBG dnf: repo: using cache for: anaconda
+05:46:51,313 DBG packaging: repo anaconda: _sync_metadata success from ['https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/']
+05:46:51,313 DBG dnf: repo: using cache for: koji-override-0
+05:46:51,314 DBG packaging: repo koji-override-0: _sync_metadata success from ['https://kojipkgs.fedoraproject.org/compose/updates/f31-updates/compose/Everything/x86_64/os/']
+05:46:51,314 DBG dnf: repo: using cache for: koji-override-1
+05:46:51,314 DBG packaging: repo koji-override-1: _sync_metadata success from ['https://kojipkgs.fedoraproject.org/compose/31/latest-Fedora-31/compose/Everything/x86_64/os/']
+05:46:51,316 DBG dnf: repo: using cache for: anaconda
+05:47:11,873 DBG dnf: anaconda: using metadata from Wed 23 Oct 2019 10:52:47 PM UTC.
+05:47:11,873 DBG dnf: repo: using cache for: koji-override-0
+05:47:20,392 DBG dnf: koji-override-0: using metadata from Thu 14 May 2020 02:08:06 AM UTC.
+05:47:20,393 DBG dnf: repo: using cache for: koji-override-1
+05:47:43,922 DBG dnf: koji-override-1: using metadata from Wed 23 Oct 2019 10:52:47 PM UTC.
+05:47:43,923 INF dnf: Last metadata expiration check: 0:00:26 ago on Thu 14 May 2020 05:46:49 AM UTC.
+05:47:43,937 DBG dnf: No module defaults found
+05:47:43,940 Level 8 dnf: timer: sack setup: 52625 ms
+05:47:43,940 Level 8 dnf: Getting group metadata
+05:47:43,941 Level 8 dnf: Adding group file from repository: anaconda
+05:47:44,024 Level 8 dnf: Adding group file from repository: koji-override-0
+05:47:44,168 Level 8 dnf: Adding group file from repository: koji-override-1
+05:47:44,306 Level 8 dnf: timer: loading comps: 365 ms
+05:47:46,402 INF packaging: Failed to parse proxy for test if repo available : No host url
+05:47:46,472 INF packaging: Failed to parse proxy for test if repo available : No host url
+05:47:46,520 INF packaging: Failed to parse proxy for test if repo available : No host url
+05:47:47,681 DBG packaging: Input mount points: {'/dev': Size (1.883510589599609375 GiB), '/dev/shm': Size (1.921710968017578125 GiB), '/run': Size (1.865657806396484375 GiB), '/': Size (107.59765625 MiB), '/tmp': Size (1.587451934814453125 GiB), '/mnt/sysroot': Size (4.24916992150247097015380859375 GiB)}
+05:47:47,683 INF packaging: Estimated size: download 0 B & install 2.79 GiB
+05:47:47,684 INF packaging: Sufficient mountpoints found: {'/': Size (107.59765625 MiB), '/tmp': Size (1.587451934814453125 GiB), '/mnt/sysroot': Size (4.24916992150247097015380859375 GiB)}
+05:47:47,685 DBG packaging: Install + download space required 2.79 GiB
+05:47:54,905 INF packaging: checking software selection
+05:47:54,909 DBG packaging: disabling modules: []
+05:47:54,914 DBG packaging: enabling modules: []
+05:47:54,914 DBG dnf: No module defaults found
+05:47:54,917 DBG packaging: applying DNF package/group/module selection
+05:47:54,918 INF packaging: skipping core group due to %%packages --nocore; system may not be complete
+05:47:54,918 INF packaging: excluded package: 'cracklib-dicts'
+05:47:54,918 INF packaging: excluded package: 'dosfstools'
+05:47:54,918 INF packaging: excluded package: 'e2fsprogs'
+05:47:54,918 INF packaging: excluded package: 'fuse-libs'
+05:47:54,919 INF packaging: excluded package: 'glibc-langpack-en'
+05:47:54,919 INF packaging: excluded package: 'gnupg2-smime'
+05:47:54,919 INF packaging: excluded package: 'grubby'
+05:47:54,919 INF packaging: excluded package: 'kernel'
+05:47:54,919 INF packaging: excluded package: 'langpacks-en'
+05:47:54,920 INF packaging: excluded package: 'libss'
+05:47:54,920 INF packaging: excluded package: 'pinentry'
+05:47:54,920 INF packaging: excluded package: 'shared-mime-info'
+05:47:54,920 INF packaging: excluded package: 'trousers'
+05:47:54,920 INF packaging: excluded package: 'xkeyboard-config'
+05:47:54,920 INF packaging: selected package: 'bash'
+05:47:54,921 INF packaging: selected package: 'coreutils'
+05:47:54,921 INF packaging: selected package: 'dnf'
+05:47:54,921 INF packaging: selected package: 'dnf-yum'
+05:47:54,921 INF packaging: selected package: 'fedora-release-container'
+05:47:54,921 INF packaging: selected package: 'fedora-repos-modular'
+05:47:54,921 INF packaging: selected package: 'glibc-minimal-langpack'
+05:47:54,922 INF packaging: selected package: 'libcrypt'
+05:47:54,922 INF packaging: selected package: 'rootfiles'
+05:47:54,922 INF packaging: selected package: 'rpm'
+05:47:54,922 INF packaging: selected package: 'shadow-utils'
+05:47:54,922 INF packaging: selected package: 'sssd-client'
+05:47:54,922 INF packaging: selected package: 'sudo'
+05:47:54,923 INF packaging: selected package: 'systemd'
+05:47:54,923 INF packaging: selected package: 'tar'
+05:47:54,923 INF packaging: selected package: 'util-linux'
+05:47:54,923 INF packaging: selected package: 'vim-minimal'
+05:47:54,923 ERR packaging: kernel: failed to select a kernel from []
+05:47:54,924 DBG packaging: selected package: e2fsprogs, requirement for ['storage'] IGNORED because excluded
+05:47:54,924 DBG packaging: selected package: langpacks-en, requirement for ['langpacks'] IGNORED because excluded
+05:47:54,924 DBG packaging: transaction include list
+05:47:54,925 DBG packaging: ['bash', 'coreutils', 'dnf', 'dnf-yum', 'fedora-release-container', 'fedora-repos-modular', 'glibc-minimal-langpack', 'libcrypt', 'rootfiles', 'rpm', 'shadow-utils', 'sssd-client', 'sudo', 'systemd', 'tar', 'util-linux', 'vim-minimal']
+05:47:54,925 DBG packaging: transaction exclude list
+05:47:54,925 DBG packaging: ['@core', 'cracklib-dicts', 'dosfstools', 'e2fsprogs', 'fuse-libs', 'glibc-langpack-en', 'gnupg2-smime', 'grubby', 'kernel', 'langpacks-en', 'libss', 'pinentry', 'shared-mime-info', 'trousers', 'xkeyboard-config']
+05:47:55,159 Level 8 dnf: timer: depsolve: 99 ms
+05:47:55,161 INF packaging: checking dependencies: success
+05:47:55,243 DBG packaging: Size from DNF: 225.93 MiB
+05:47:55,243 DBG packaging: Bonus size 179.09 MiB by number of files 30565
+05:47:55,243 DBG packaging: Total size required 445.53 MiB
+05:47:55,265 DBG packaging: Input mount points: {'/dev': Size (1.883510589599609375 GiB), '/dev/shm': Size (1.921710968017578125 GiB), '/run': Size (1.86565399169921875 GiB), '/': Size (107.55078125 MiB), '/tmp': Size (1.539119720458984375 GiB), '/mnt/sysroot': Size (4.572780609130859375 GiB), '/mnt/sysroot/dev/shm': Size (1.921726226806640625 GiB)}
+05:47:55,266 INF packaging: Estimated size: download 205.56 MiB & install 445.53 MiB
+05:47:55,266 INF packaging: Sufficient mountpoints found: {'/tmp': Size (1.539119720458984375 GiB), '/mnt/sysroot': Size (4.572780609130859375 GiB)}
+05:47:55,267 DBG packaging: Install + download space required 651.08 MiB
+05:47:55,268 INF packaging: 160 packages selected totalling 651.08 MiB
+05:47:55,346 DBG packaging: Size from DNF: 225.93 MiB
+05:47:55,346 DBG packaging: Bonus size 179.09 MiB by number of files 30565
+05:47:55,346 DBG packaging: Total size required 445.53 MiB
+05:47:55,365 DBG packaging: Input mount points: {'/dev': Size (1.883510589599609375 GiB), '/dev/shm': Size (1.921710968017578125 GiB), '/run': Size (1.86565399169921875 GiB), '/': Size (107.55078125 MiB), '/tmp': Size (1.53911590576171875 GiB), '/mnt/sysroot': Size (4.572780609130859375 GiB), '/mnt/sysroot/dev/shm': Size (1.921726226806640625 GiB)}
+05:47:55,366 INF packaging: Estimated size: download 205.56 MiB & install 445.53 MiB
+05:47:55,367 INF packaging: Sufficient mountpoints found: {'/tmp': Size (1.53911590576171875 GiB), '/mnt/sysroot': Size (4.572780609130859375 GiB)}
+05:47:55,368 INF packaging: Mountpoint /tmp picked as download location
+05:47:55,372 INF packaging: Downloading packages to /tmp/dnf.package.cache.
+05:47:57,566 INF packaging: Downloading packages finished.
+05:47:57,600 INF dnf: Running transaction check
+05:47:57,734 INF dnf: Transaction check succeeded.
+05:47:57,735 INF dnf: Running transaction test
+05:47:58,895 INF dnf: Transaction test succeeded.
+05:47:58,895 Level 8 dnf: timer: transaction test: 1160 ms
+05:47:58,896 INF dnf: Running transaction
+05:47:58,899 DBG dnf: RPMDB altered outside of DNF.
+05:48:00,202 Level 8 dnf: RPM transaction start.
+05:48:00,916 INF packaging: Configuring (running scriptlet for): filesystem-3.12-2.fc31.x86_64 1564014932 ce05d442cca1de33cb9b4dfb72b94d8b97a072e2add394e075131d395ef463ff
+05:48:01,287 INF packaging: Installed: libgcc-9.3.1-2.fc31.x86_64 1586350836 1075e1a4fdc55576b51adb5f7ae5aa89453b836d64244bab4cb043fedadfffde
+05:48:01,305 INF packaging: Configuring (running scriptlet for): libgcc-9.3.1-2.fc31.x86_64 1586350836 1075e1a4fdc55576b51adb5f7ae5aa89453b836d64244bab4cb043fedadfffde
+05:48:01,314 INF packaging: Installed: tzdata-2019c-2.fc31.noarch 1579484327 bf4871693810b70824be29745e06731121370e339215781102d4418846810c89
+05:48:02,023 INF packaging: Installed: systemd-rpm-macros-243.8-1.fc31.noarch 1585235794 4e77cd70a56884aa7910229203e249a83d045eeb19b9a8c156b64c30c2c1fde1
+05:48:02,034 INF packaging: Installed: python-setuptools-wheel-41.6.0-1.fc31.noarch 1581518261 3e718f8b77980808c70d69f5b937ecdeb036d9813aafad2e19709545cad08102
+05:48:02,045 INF packaging: Installed: pcre2-syntax-10.34-9.fc31.noarch 1585728230 c046a049fb60eee6a95e5fb873405aa5656cc559c6c4bb17d6c7fce9b1fa9c5a
+05:48:02,052 INF packaging: Installed: libssh-config-0.9.4-2.fc31.noarch 1586968625 694967115b0519904b99b10d8acc6e4d56950fa671f5605c33e7e42de0e05a2e
+05:48:02,061 INF packaging: Installed: libreport-filesystem-2.12.0-1.fc31.noarch 1581005979 5e5a3eb8e202a20d22211082dbcd115979a46cff9e04ded37d3a5c7ef95f048f
+05:48:02,065 INF packaging: Installed: dnf-data-4.2.21-1.fc31.noarch 1585771821 ea7329ac24c74f10a96dba09b316e5479e3df8a5e30491fccbc027db0b99b327
+05:48:02,077 INF packaging: Installed: fedora-gpg-keys-31-3.noarch 1587172180 ee0d7e5508b94fdc3ccf787deefb41047683dd1d55f2c38676a901b76c45f25e
+05:48:02,132 INF packaging: Installed: fedora-release-container-31-4.noarch 1588078211 cf2d4f349c38f646551df057d064f2677cef6f4b21fbbd03b1ac91b57837c68f
+05:48:02,144 INF packaging: Installed: fedora-repos-31-3.noarch 1587172180 9f7962cead7303cc07772140b5dfd387808ad9bb470cb0d77ee59b2c4579a5fb
+05:48:02,148 INF packaging: Installed: fedora-release-common-31-4.noarch 1588078211 08553755c556ebad76bf208feb685b4577fc45f0c5c0a7aa819c896a064f250b
+05:48:02,169 INF packaging: Installed: setup-2.13.6-1.fc31.noarch 1570614322 777f3f96f1014722e9783b314385e336ee200b66ed28eaee75aaa34b3489392d
+05:48:02,189 INF packaging: Configuring (running scriptlet for): setup-2.13.6-1.fc31.noarch 1570614322 777f3f96f1014722e9783b314385e336ee200b66ed28eaee75aaa34b3489392d
+05:48:02,209 INF packaging: Installed: filesystem-3.12-2.fc31.x86_64 1564014932 ce05d442cca1de33cb9b4dfb72b94d8b97a072e2add394e075131d395ef463ff
+05:48:02,408 INF packaging: Installed: basesystem-11-8.fc31.noarch 1563995158 20ef955e5f735233a425725b9af41d960b5602dfb0ae812ae720e37c9bf8a292
+05:48:02,415 INF packaging: Installed: coreutils-common-8.31-10.fc31.x86_64 1587648886 61d65fe9789c1153966b90e83f8670039789ce104f307b6b0061a185de71787d
+05:48:02,441 INF packaging: Installed: publicsuffix-list-dafsa-20190417-2.fc31.noarch 1564174250 359d74d5f3988e1c2c5327f9d4ea59d0c49a2383541928084ef00383d70b6d55
+05:48:02,449 INF packaging: Installed: ncurses-base-6.1-12.20190803.fc31.noarch 1565169667 cbd9d78da00aea6c1e98398fe883d5566971b3bc6764a07c5e945cd317013686
+05:48:02,539 INF packaging: Installed: pcre2-10.34-9.fc31.x86_64 1585728219 cbb80d27ab68adbf80fe0f359c8e2ce1e943c6a9d2b98d7ca011ce07173c18b9
+05:48:02,552 INF packaging: Installed: libselinux-2.9-5.fc31.x86_64 1565619201 b75fe6088e737720ea81a9377655874e6ac6919600a5652576f9ebb0d9232e5e
+05:48:02,562 INF packaging: Installed: ncurses-libs-6.1-12.20190803.fc31.x86_64 1565169550 7b3ba4cdf8c0f1c4c807435d7b7a4a93ecb02737a95d064f3f20299e5bb3a106
+05:48:02,585 INF packaging: Installed: glibc-minimal-langpack-2.30-11.fc31.x86_64 1585010661 9e3f2c859a563563c9e09f1d2880000dacda708cad2e56d569fe85996c38718a
+05:48:02,587 INF packaging: Installed: glibc-common-2.30-11.fc31.x86_64 1585010661 8a09c12a777fb39682798ab205dcaaab5145b0b2c398e9b30a4a793808be9ac5
+05:48:02,640 INF packaging: Configuring (running scriptlet for): glibc-2.30-11.fc31.x86_64 1585010661 14c428d8f2f9e4297fccb2cb972216926c7ab82ed417d8299cc0d4b4a2c0f341
+05:48:02,641 INF packaging: Installed: glibc-2.30-11.fc31.x86_64 1585010661 14c428d8f2f9e4297fccb2cb972216926c7ab82ed417d8299cc0d4b4a2c0f341
+05:48:03,016 INF packaging: Configuring (running scriptlet for): glibc-2.30-11.fc31.x86_64 1585010661 14c428d8f2f9e4297fccb2cb972216926c7ab82ed417d8299cc0d4b4a2c0f341
+05:48:03,159 INF packaging: Installed: bash-5.0.11-1.fc31.x86_64 1575634080 6dad98ebaba9b1c46684d7e7acb835ffcf7f1e0e3a697d8351e8938f66e99a1d
+05:48:03,192 INF packaging: Configuring (running scriptlet for): bash-5.0.11-1.fc31.x86_64 1575634080 6dad98ebaba9b1c46684d7e7acb835ffcf7f1e0e3a697d8351e8938f66e99a1d
+05:48:03,198 INF packaging: Installed: libsepol-2.9-2.fc31.x86_64 1564094791 2ebd4efba62115da56ed54b7f0a5c2817f9acd29242a0334f62e8c645b81534f
+05:48:03,212 INF packaging: Configuring (running scriptlet for): libsepol-2.9-2.fc31.x86_64 1564094791 2ebd4efba62115da56ed54b7f0a5c2817f9acd29242a0334f62e8c645b81534f
+05:48:03,235 INF packaging: Installed: zlib-1.2.11-20.fc31.x86_64 1572358039 28aca2b4c94a494e5f02bd17f8cd146ad549ec443d8ea0dbdc0a1092daf48f4f
+05:48:03,244 INF packaging: Installed: xz-libs-5.2.4-6.fc31.x86_64 1564247130 841b13203994dc0184da601d51712a9d83aa239ae9b3eaef5e7e372d3063a431
+05:48:03,258 INF packaging: Installed: bzip2-libs-1.0.8-1.fc31.x86_64 1565095398 ac05bd748e0fa500220f46ed02c4a4a2117dfa88dec83ffca86af21546eb32d7
+05:48:03,267 INF packaging: Installed: libdb-5.3.28-38.fc31.x86_64 1564086238 825f2b7c1cbd6bf5724dac4fe015d0bca0be1982150e9d4f40a9bd3ed6a5d8cc
+05:48:03,291 INF packaging: Installed: libzstd-1.4.4-1.fc31.x86_64 1579100019 c5f9fa69e2e45127742f1c5ccccf4082bf3bdf0314dc7a9935daff05f416f63d
+05:48:03,302 INF packaging: Installed: libcap-2.26-6.fc31.x86_64 1564085579 752afa1afcc629d0de6850b51943acd93d37ee8802b85faede3082ea5b332090
+05:48:03,319 INF packaging: Installed: libgpg-error-1.36-2.fc31.x86_64 1565801735 2bda0490bdec6e85dab028721927971966caaca2b604785ca4b1ec686a245fbd
+05:48:03,333 INF packaging: Installed: libuuid-2.34-4.fc31.x86_64 1576514871 fc62141e33e641e26f470c60dddac9b7f2f7af0f4e479fc9f9fb3908e5567884
+05:48:03,342 INF packaging: Installed: libxcrypt-4.4.16-3.fc31.x86_64 1587799582 5056b489f11f49767109ce6c218b5fce195d11f48677c8e4ea19ed54b0542e35
+05:48:03,350 INF packaging: Installed: gmp-1:6.1.2-10.fc31.x86_64 1550745445 a2cc503ec5b820eebe5ea01d741dd8bbae9e8482248d76fc3dd09359482c3b5a
+05:48:03,392 INF packaging: Installed: popt-1.16-18.fc31.x86_64 1564169881 7ad348ab75f7c537ab1afad01e643653a30357cdd6e24faf006afd48447de632
+05:48:03,402 INF packaging: Installed: libcom_err-1.45.5-1.fc31.x86_64 1579182726 12113b67b6fa5569bd2ae99be6f3c5aaced0d6c8f0a2b282e78db744dd2dcb08
+05:48:03,410 INF packaging: Installed: libxml2-2.9.10-3.fc31.x86_64 1581504282 cd305ce55f7cf3e39148abdd568c90a002be05fd8f9907ffa15cd0fa4554eb27
+05:48:03,433 INF packaging: Installed: elfutils-libelf-0.179-2.fc31.x86_64 1588288792 64d6b94c78f7482bea38e45297225b05203277cb63731c694fdea80efbdc75e5
+05:48:03,444 INF packaging: Installed: expat-2.2.8-1.fc31.x86_64 1568622776 d53b4a19789e80f5af881a9cde899b2f3c95d05b6ef20d6bf88272313720286f
+05:48:03,454 INF packaging: Installed: lua-libs-5.3.5-6.fc31.x86_64 1564100711 cba15cfd9912ae8afce2f4a0b22036f68c6c313147106a42ebb79b6f9d1b3e1a
+05:48:03,464 INF packaging: Installed: libgcrypt-1.8.5-1.fc31.x86_64 1567586852 2235a7ff5351a81a38e613feda0abee3a4cbc06512451d21ef029f4af9a9f30f
+05:48:03,483 INF packaging: Installed: file-libs-5.37-8.fc31.x86_64 1571989637 94d926b2b04924ddfaec4bdbd39675284ec72b2d29582da722ed6865e5be28f2
+05:48:03,536 INF packaging: Installed: sqlite-libs-3.30.0-1.fc31.x86_64 1570445722 5c6790b7b9c6182added9d9a41c08ea1480c07222d2e4120f0d04b2ee908e500
+05:48:03,554 INF packaging: Installed: libattr-2.4.48-7.fc31.x86_64 1563994148 8ebb46ef920e5d9171424dd153e856744333f0b13480f12123e14c0adbd372be
+05:48:03,561 INF packaging: Installed: libacl-2.2.53-4.fc31.x86_64 1563989674 910c6772942fa77b9aa855718dd077a14f130402e409c003474d7e53b45738bc
+05:48:03,569 INF packaging: Installed: sed-4.5-4.fc31.x86_64 1564213393 deb934183f8554669821baf08d13a85b729a037fb6e4b60ad3894c996063a165
+05:48:03,579 INF packaging: Installed: libffi-3.1-23.fc31.x86_64 1564087048 60c2bf4d0b3bd8184e509a2dc91ff673b89c011dcdf69084d298f2c23ef0b3f0
+05:48:03,588 INF packaging: Installed: p11-kit-0.23.20-1.fc31.x86_64 1580317525 78f45e061d75f8cfa4544b3fb8d5449c79f70d0465991bbf5c3fa331d05691d6
+05:48:03,612 INF packaging: Installed: libunistring-0.9.10-6.fc31.x86_64 1564096403 67f494374ee07d581d587388ab95b7625005338f5af87a257bdbb1e26a3b6a42
+05:48:03,634 INF packaging: Installed: libidn2-2.3.0-1.fc31.x86_64 1573930144 05afd94818d821b720270bbf0353a7699660153915a616b5885ca76379342a45
+05:48:03,645 INF packaging: Installed: lz4-libs-1.9.1-1.fc31.x86_64 1566118168 9f3414d124857fd37b22714d2ffadaa35a00a7126e5d0d6e25bbe089afc87b39
+05:48:03,654 INF packaging: Installed: readline-8.0-3.fc31.x86_64 1564193537 228280fc7891c414da49b657768e98dcda96462e10a9998edb89f8910cd5f7dc
+05:48:03,667 INF packaging: Installed: libcap-ng-0.7.10-1.fc31.x86_64 1569956138 9b64783d0b9b12b815ddf4f53d194776231097f872277e859f04119e63207eb9
+05:48:03,675 INF packaging: Installed: audit-libs-3.0-0.15.20191104git1c2f876.fc31.x86_64 1572900218 63753f2e3db033350e2350b5d2b3b1e3465f45dff8556b3b76a4b942edd206d0
+05:48:03,687 INF packaging: Installed: libsmartcols-2.34-4.fc31.x86_64 1576514871 3d90b7fd0cd320d87adeea55a9b1ea64524d069b784b969339a7ad55708eac59
+05:48:03,698 INF packaging: Installed: libstdc++-9.3.1-2.fc31.x86_64 1586350836 d122a01e5dd44bbcff8b0568df5e6b0d01ca728215ddaa16a1bec57c6461af66
+05:48:03,733 INF packaging: Installed: libassuan-2.5.3-2.fc31.x86_64 1566204325 bce6ac5968f13cce82decd26a934b9182e1fd8725d06c3597ae1e84bb62877f8
+05:48:03,743 INF packaging: Installed: alternatives-1.11-5.fc31.x86_64 1563999277 7e818c6d664ab888801f5ef1a7d6e5921fee8e1202be6d5d5279869101782081
+05:48:03,752 INF packaging: Installed: keyutils-libs-1.6-3.fc31.x86_64 1564080208 cfdf9310e54bc09babd3b37ae0d4941a50bf460964e1e299d1000c50d93d01d1
+05:48:03,760 INF packaging: Installed: libtasn1-4.14-2.fc31.x86_64 1564095864 4d2b475e56aba896dbf12616e57c5e6c2651a864d4d9376d08ed77c9e2dd5fbb
+05:48:03,771 INF packaging: Installed: p11-kit-trust-0.23.20-1.fc31.x86_64 1580317525 e1acdf3c599048e8f6da74450f07cbcc7a22c0ba9ddad0b389c28a20273f6a95
+05:48:03,784 INF packaging: Configuring (running scriptlet for): p11-kit-trust-0.23.20-1.fc31.x86_64 1580317525 e1acdf3c599048e8f6da74450f07cbcc7a22c0ba9ddad0b389c28a20273f6a95
+05:48:03,806 INF packaging: Installed: json-c-0.13.1-11.fc31.x86_64 1586708712 f32890061b1d1687667aa06c15843d0d400a769c4d8c62451d8a78467ed9b90e
+05:48:03,824 INF packaging: Installed: pcre-8.44-1.fc31.x86_64 1582879757 32cb165625a810061dd6c9b6e6ba4e6b704e06c651237296696e2f5fff52482a
+05:48:03,838 INF packaging: Installed: grep-3.3-3.fc31.x86_64 1564065246 429d0c6cc38e9e3646ede67aa9d160f265a8f9cbe669e8eefd360a8316054ada
+05:48:03,852 INF packaging: Installed: libsemanage-2.9-3.fc31.x86_64 1565728736 fd2f883d0bda59af039ac2176d3fb7b58d0bf173f5ad03128c2f18196886eb32
+05:48:03,865 INF packaging: Installed: shadow-utils-2:4.6-18.fc31.x86_64 1585651487 d110ff17f42ecc636cff0d50fb6e6f92383942a3abcf08c7a6684bc5291bcf2d
+05:48:03,910 INF packaging: Configuring (running scriptlet for): libutempter-1.1.6-17.fc31.x86_64 1564096592 226888f99cd9c731e97b92b8832c14a9a5842f37f37f6b10707cbaadbff20cf5
+05:48:03,990 INF packaging: Installed: libutempter-1.1.6-17.fc31.x86_64 1564096592 226888f99cd9c731e97b92b8832c14a9a5842f37f37f6b10707cbaadbff20cf5
+05:48:04,004 INF packaging: Installed: libpsl-0.21.0-2.fc31.x86_64 1564093504 71b445c5ef5ff7dbc24383fe81154b1b4db522cd92442c6b2a162e9c989ab730
+05:48:04,012 INF packaging: Installed: acl-2.2.53-4.fc31.x86_64 1563989674 2015152c175a78e6da877565d946fe88f0a913052e580e599480884a9d7eb27d
+05:48:04,024 INF packaging: Installed: vim-minimal-2:8.2.694-1.fc31.x86_64 1588591402 2eb99d5bdca51d96d41507dd2e2d8ccae58d46fe9dfc6f96107e9c03661b62e0
+05:48:04,045 INF packaging: Installed: libmetalink-0.1.3-9.fc31.x86_64 1564090509 b743e78e345c1199d47d6d3710a4cdf93ff1ac542ae188035b4a858bc0791a43
+05:48:04,053 INF packaging: Installed: libcomps-0.1.15-1.fc31.x86_64 1585745825 52e925b95581167102329781d4fa61e492dc9fef290fb8f6ab028d19a6c42362
+05:48:04,062 INF packaging: Installed: mpfr-3.1.6-5.fc31.x86_64 1564112525 d6d33ad8240f6e73518056f0fe1197cb8da8dc2eae5c0348fde6252768926bd2
+05:48:04,075 INF packaging: Installed: nettle-3.5.1-3.fc31.x86_64 1564116136 429d5b9a845285710b7baad1cdc96be74addbf878011642cfc7c14b5636e9bcc
+05:48:04,097 INF packaging: Installed: libksba-1.3.5-10.fc31.x86_64 1564089463 ae113203e1116f53037511d3e02e5ef8dba57e3b53829629e8c54b00c740452f
+05:48:04,110 INF packaging: Installed: libdb-utils-5.3.28-38.fc31.x86_64 1564086238 a9a2dd2fae52473c35c6677d4ac467bf81be20256916bf4e65379a0e97642627
+05:48:04,132 INF packaging: Installed: brotli-1.0.7-6.fc31.x86_64 1563997082 2c58791f5b7f7c3489f28a20d1a34849aeadbeed68e306e349350b5c455779b1
+05:48:04,154 INF packaging: Installed: gdbm-libs-1:1.18.1-1.fc31.x86_64 1570185613 fba574e749c579b5430887d37f513f1eb622a4ed66aec7e103230f1b5296ca84
+05:48:04,163 INF packaging: Installed: libargon2-20171227-3.fc31.x86_64 1563992534 380c550646d851548504adb7b42ed67fd51b8624b59525c11b85dad44d46d0de
+05:48:04,172 INF packaging: Installed: libsigsegv-2.11-8.fc31.x86_64 1564095050 1b14f1e30220d6ae5c9916595f989eba6a26338d34a9c851fed9ef603e17c2c4
+05:48:04,180 INF packaging: Installed: gawk-5.0.1-5.fc31.x86_64 1564019883 826ab0318f77a2dfcda2a9240560b6f9bd943e63371324a96b07674e7d8e5203
+05:48:04,231 INF packaging: Installed: libverto-0.3.0-8.fc31.x86_64 1564096673 9e462579825ae480e28c42b135742278e38777eb49d4e967b90051b2a4269348
+05:48:04,239 INF packaging: Installed: libyaml-0.2.2-2.fc31.x86_64 1564097512 7a98f9fce4b9a981957cb81ce60b2a4847d2dd3a3b15889f8388a66de0b15e34
+05:48:04,248 INF packaging: Installed: ncurses-6.1-12.20190803.fc31.x86_64 1565169550 19315dc93ffb895caa890949f368aede374497019088872238841361fa06f519
+05:48:04,259 INF packaging: Installed: krb5-libs-1.17-46.fc31.x86_64 1581002701 604e53051da9b17f3667ece52d0049b09e20dbe8013e2f4c071a0ee1bf63e180
+05:48:04,302 INF packaging: Installed: libtirpc-1.2.6-0.fc31.x86_64 1586878677 d4064e680dca43bdbfc0111d97f9257c0ed026c46e6ab6237e5dabc0db10e93e
+05:48:04,311 INF packaging: Installed: libnsl2-1.2.0-5.20180605git4a062cf.fc31.x86_64 1564092258 d50d6b0120430cf78af612aad9b7fd94c3693dffadebc9103a661cc24ae51b6a
+05:48:04,320 INF packaging: Installed: python-pip-wheel-19.1.1-8.fc31.noarch 1587476617 482013dfc169be72202047a80c344f907ff142841478d4aaf711218d5a41ab32
+05:48:04,335 INF packaging: Installed: openssl-libs-1:1.1.1g-1.fc31.x86_64 1587643720 5db355a5c4d791faa102ae51b916a463fc04e38273b72a0569af00ce0bf7f4be
+05:48:04,381 INF packaging: Installed: coreutils-8.31-10.fc31.x86_64 1587648886 7536e5fb1fb7531b8e2dd5c05b5a2b173eb607225ed46d8d9a8464eabd1a71f3
+05:48:04,523 INF packaging: Configuring (running scriptlet for): ca-certificates-2020.2.40-1.1.fc31.noarch 1580387588 9c423d064631aa59a1986f1539180c57800f47426e3460b17fb2172462b7555b
+05:48:04,536 INF packaging: Installed: ca-certificates-2020.2.40-1.1.fc31.noarch 1580387588 9c423d064631aa59a1986f1539180c57800f47426e3460b17fb2172462b7555b
+05:48:04,573 INF packaging: Configuring (running scriptlet for): ca-certificates-2020.2.40-1.1.fc31.noarch 1580387588 9c423d064631aa59a1986f1539180c57800f47426e3460b17fb2172462b7555b
+05:48:04,990 INF packaging: Installed: python3-libs-3.7.7-1.fc31.x86_64 1584092333 2e714ac69aabb5b257256e4d6fe00a807fac6844c4aaf174024428ecd3bb19a5
+05:48:06,651 INF packaging: Installed: python3-3.7.7-1.fc31.x86_64 1584092333 68ebb4b8e8e54405d9e11dc0e3d494c2d8536356ee5509cd30360bcb8436180f
+05:48:06,661 INF packaging: Installed: crypto-policies-20191128-2.gitcd267a5.fc31.noarch 1576518872 97eb30a16d427e68141071b871ce4104e62ea6a9182a26b2611f49bf76af7028
+05:48:06,755 INF packaging: Installed: libblkid-2.34-4.fc31.x86_64 1576514871 63c15472dde1ef00cb5c5d0d0a6d4aad9dbe5d48ec72b63b02e3a96670d03c64
+05:48:06,765 INF packaging: Configuring (running scriptlet for): libblkid-2.34-4.fc31.x86_64 1576514871 63c15472dde1ef00cb5c5d0d0a6d4aad9dbe5d48ec72b63b02e3a96670d03c64
+05:48:06,787 INF packaging: Installed: systemd-libs-243.8-1.fc31.x86_64 1585235755 a685677a56e450282db0f6423e2ce9b8d93bc9f09a52f29fa836b2639704d0c2
+05:48:06,817 INF packaging: Configuring (running scriptlet for): systemd-libs-243.8-1.fc31.x86_64 1585235755 a685677a56e450282db0f6423e2ce9b8d93bc9f09a52f29fa836b2639704d0c2
+05:48:06,860 INF packaging: Installed: libmount-2.34-4.fc31.x86_64 1576514871 1d63c92cefba615165f27888e7a401d4ec75963b12fd3071c24721b5e38310fa
+05:48:06,875 INF packaging: Installed: glib2-2.62.6-1.fc31.x86_64 1584539710 7198e52cbe3b347fc7bdb96dd1da1ae5a0b95ec49bcdcecebcc38c9fc29eb40d
+05:48:06,952 INF packaging: Installed: gnutls-3.6.13-1.fc31.x86_64 1585654880 29d2311fb52b105a1cdeea3b986807c4394df778933170c3e42977b147e5d721
+05:48:06,982 INF packaging: Installed: zchunk-libs-1.1.5-1.fc31.x86_64 1579384610 de4c0a701268fb1916e4e20cc785b6d0c840da2bce1681bed5bd6fcc18a217ba
+05:48:06,990 INF packaging: Installed: libusbx-1.0.22-4.fc31.x86_64 1564096581 66fce2375c456c539e23ed29eb3b62a08a51c90cde0364112e8eb06e344ad4e8
+05:48:06,999 INF packaging: Installed: libfdisk-2.34-4.fc31.x86_64 1576514871 fe265b8a6bd7ca56b50362891c58abefee115b621056d9dfcdfb42c616dfc3f7
+05:48:07,012 INF packaging: Installed: libssh-0.9.4-2.fc31.x86_64 1586968600 ceb9f023e4ce19044f677d6df0102ad1d60bcb7ce5d3e0e1637ce416acd15b3f
+05:48:07,024 INF packaging: Installed: python3-libcomps-0.1.15-1.fc31.x86_64 1585745825 3c6a7b7a57faf14becd03a4f65b54339e2cfc3a4284b95c6e77c7278ed7a8568
+05:48:07,036 INF packaging: Installed: gzip-1.10-1.fc31.x86_64 1565334544 1f1ed6ed142b94b6ad53d11a1402417bc696a7a2c8cacaf25d12b7ba6db16f01
+05:48:07,054 INF packaging: Installed: cracklib-2.9.6-21.fc31.x86_64 1565362157 a2709e60bc43f50f75cda7e3b4b6910c2a04754127ef0851343a1c792b44d8a4
+05:48:07,065 INF packaging: Installed: libpwquality-1.4.2-1.fc31.x86_64 1572524723 7d3a65ab6027372ed789c292c4e0670094ba4b769ced67d44b6cc832909c1b27
+05:48:07,084 INF packaging: Installed: pam-1.3.1-21.fc31.x86_64 1576674834 6dfb5daab3317e7d5689b01e0fe154bbfc96ed02f228ee08f0e576e365a8f945
+05:48:07,168 INF packaging: Installed: util-linux-2.34-4.fc31.x86_64 1576514871 e7895b7c8ceb4144871585670e630a8391ab87da59766da08dcbed7b84175fe0
+05:48:07,391 INF packaging: Configuring (running scriptlet for): util-linux-2.34-4.fc31.x86_64 1576514871 e7895b7c8ceb4144871585670e630a8391ab87da59766da08dcbed7b84175fe0
+05:48:07,420 INF packaging: Installed: openssl-1:1.1.1g-1.fc31.x86_64 1587643720 3c1903d51c31c6372070df32c86f8e19f20c09c9a5cec45836d6d68de01fcecf
+05:48:07,444 INF packaging: Installed: tss2-1331-2.fc31.x86_64 1564232435 afb7f560c368bfc13c4f0885638b47ae5c3352ac726625f56a9ce6f492bc798f
+05:48:07,574 INF packaging: Installed: ima-evm-utils-1.2.1-2.fc31.x86_64 1564598252 efcf9db40d3554c93cd0ec593717f68f2bfeb68c2b102cb9a4650933d6783ac6
+05:48:07,584 INF packaging: Installed: kmod-libs-26-4.fc31.x86_64 1564082073 ac074fa439e3b877d37e03c74f5b34f4d28f2f18d8ee23d62bf1987fbc39cca1
+05:48:07,594 INF packaging: Installed: libarchive-3.4.2-1.fc31.x86_64 1581499306 286ca8cede1212373c17733e85e9ffa9b2d9243d55b6441c7b8ab48742c03d78
+05:48:07,610 INF packaging: Installed: cyrus-sasl-lib-2.1.27-3.fc31.x86_64 1584644085 c9aa2944f0c1a84844eef21063ad3fe5ad7fc548cc4be7cd00591fa0acca5a5f
+05:48:07,626 INF packaging: Installed: openldap-2.4.47-3.fc31.x86_64 1564132479 b4989c0bc1b0da45440f2eaf1f37f151b8022c8509700a3d5273e4054b545c38
+05:48:07,647 INF packaging: Installed: npth-1.6-3.fc31.x86_64 1564126123 be1666f539d60e783cdcb7be2bc28bf427a873a88a79e3fd1ea4efd7f470bfd2
+05:48:07,656 INF packaging: Installed: gnupg2-2.2.18-2.fc31.x86_64 1575622917 0df42f814bd6003030bf5d691c41806ae2697e6d204d52d65d0eebd25aef7a08
+05:48:07,750 INF packaging: Installed: gpgme-1.13.1-3.fc31.x86_64 1565439116 a598834d29d6669e782084b166c09d442ee30c09a41ab0120319f738cb31a86d
+05:48:07,764 INF packaging: Installed: python3-gpg-1.13.1-3.fc31.x86_64 1565439116 6372f7a295f1a0860c1540a63d0b25b4741f3c427d5221dc99e03e711415645a
+05:48:07,827 INF packaging: Installed: qrencode-libs-4.0.2-4.fc31.x86_64 1564190465 ff88817ffbbc5dc2f19e5b64dc2947f95477563bf22a97b90895d1a75539028d
+05:48:07,836 INF packaging: Installed: libgomp-9.3.1-2.fc31.x86_64 1586350836 a7f133ef55e7c86f3241fde30fd7ce7443d7218b8c9258371a69be76882635cb
+05:48:07,846 INF packaging: Installed: libnghttp2-1.40.0-1.fc31.x86_64 1581001291 e802de8c623a9f1c4343b4c39d96182429c794af4a079b36096b2e2ad1f6a457
+05:48:07,856 INF packaging: Installed: libcurl-7.66.0-1.fc31.x86_64 1568363208 00fd71d1f1db947f65d49f0da03fa4cd22b84da73c31a564afc5203a6d437241
+05:48:07,870 INF packaging: Installed: curl-7.66.0-1.fc31.x86_64 1568363208 9c682a651918df4fb389acb9a561be6fdf8f78d42b013891329083ff800b1d49
+05:48:07,881 INF packaging: Installed: rpm-4.15.1-2.fc31.x86_64 1588579365 59cc900e09249e045dc01122d7cca810d42b65a0e3f20bbfe3820000935f127f
+05:48:07,967 INF packaging: Installed: rpm-libs-4.15.1-2.fc31.x86_64 1588579365 3a3aea58b1ed5054986f0eee937f436875449beda2c7afd10d135f292f46338a
+05:48:07,983 INF packaging: Installed: libmodulemd-2.9.3-1.fc31.x86_64 1586359840 4d3f73e6e3d4cc2f654839df6f8971c5c647b313f7563172e33371975d8d8201
+05:48:07,998 INF packaging: Installed: libsolv-0.7.12-1.fc31.x86_64 1587449634 8b499879fb5e01211160e3b3ca3743159d1ccc20a6c3b5bcdf3d16c2ac47e50b
+05:48:08,015 INF packaging: Installed: rpm-sign-libs-4.15.1-2.fc31.x86_64 1588579365 406b0d9698846f18818c2141d53c37c4ad54158bed32d6812b8130b0795b47a7
+05:48:08,023 INF packaging: Installed: librepo-1.11.3-1.fc31.x86_64 1585746524 38a9cf0b3286f9b029a5fe18cbf3196aa638afb98d52b90ce3a98b4fb2f5a11c
+05:48:08,033 INF packaging: Installed: libdnf-0.47.0-1.fc31.x86_64 1585765126 567180397ac6e470169105fca6388a243ada236958758332f3b347104260c35d
+05:48:08,059 INF packaging: Installed: python3-libdnf-0.47.0-1.fc31.x86_64 1585765126 6ca4d1b9bb18fd047947228e973e7ea9a6b9e8a325b0287bb08ee0b9469fd2b2
+05:48:08,117 INF packaging: Installed: python3-hawkey-0.47.0-1.fc31.x86_64 1585765126 e7d47f96b1b544e13f69b2adcbfcc6de9965df924fdbcd38f966662d78243ce6
+05:48:08,131 INF packaging: Installed: libpcap-14:1.9.1-2.fc31.x86_64 1582552341 8665be9710ff1be353c75781829567d581e68cb12b22b1a66ec0dd7379516476
+05:48:08,142 INF packaging: Installed: iptables-libs-1.8.3-7.fc31.x86_64 1576767209 15ea2a6fd6e74ca0f9bd926550386f418d2745138a95b5118954b85289280191
+05:48:08,154 INF packaging: Installed: libseccomp-2.4.2-2.fc31.x86_64 1576549722 4956123e62e4698a46e2844111ce2e7282900953de4a5f2f501d548f7d4d064d
+05:48:08,165 INF packaging: Installed: device-mapper-1.02.171-1.fc31.x86_64 1585243053 a532b72993cb867fe1811ee4bd96a2060ed9910ffa2dd0bfbb7f0b347f1faf45
+05:48:08,181 INF packaging: Installed: device-mapper-libs-1.02.171-1.fc31.x86_64 1585243053 53ecaa8eb8cfd574d8c6ead4b720ff7702dc9d7c506f1d28f3424158a04b5cf7
+05:48:08,193 INF packaging: Installed: cryptsetup-libs-2.3.0-1.fc31.x86_64 1581063661 35e607af339d1d07f67ffc1ba564c3fe028b671df33868e76d4ed9b09ef8f78b
+05:48:08,205 INF packaging: Installed: elfutils-default-yama-scope-0.179-2.fc31.noarch 1588288848 3777adf9146c0e381b5e0b774831ed1046aa5140fd7b23087ae2c03f3ae7f441
+05:48:08,217 INF packaging: Configuring (running scriptlet for): elfutils-default-yama-scope-0.179-2.fc31.noarch 1588288848 3777adf9146c0e381b5e0b774831ed1046aa5140fd7b23087ae2c03f3ae7f441
+05:48:08,239 INF packaging: Installed: elfutils-libs-0.179-2.fc31.x86_64 1588288792 1457208615dfcaaa15cf7d59f8cf9fba11b7ceb7d26cc0ad77b040ba295c7232
+05:48:08,257 INF packaging: Installed: dbus-1:1.12.16-3.fc31.x86_64 1564650671 5db4afe4279135df6a2274ac4ed15e58af5d7135d6a9b0c0207411b098f037ee
+05:48:08,263 INF packaging: Installed: systemd-pam-243.8-1.fc31.x86_64 1585235755 2a0785e30f319729547a1c030df206829e11fcd615d9b84c3d83c466621bf2b9
+05:48:08,278 INF packaging: Configuring (running scriptlet for): systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:08,654 INF packaging: Installed: systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:09,006 INF packaging: Configuring (running scriptlet for): systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:09,191 INF packaging: Installed: dbus-common-1:1.12.16-3.fc31.noarch 1564650786 2f167a2ae4a8c29b627918c1b0f89e0b38418c394a2e373f314dbf25449a167c
+05:48:09,209 INF packaging: Configuring (running scriptlet for): dbus-common-1:1.12.16-3.fc31.noarch 1564650786 2f167a2ae4a8c29b627918c1b0f89e0b38418c394a2e373f314dbf25449a167c
+05:48:09,254 INF packaging: Configuring (running scriptlet for): dbus-broker-21-6.fc31.x86_64 1564004553 ec0eb93eef4645c726c4e867a9fdc8bba8fde484f292d0a034b803fe39ac73d8
+05:48:09,394 INF packaging: Installed: dbus-broker-21-6.fc31.x86_64 1564004553 ec0eb93eef4645c726c4e867a9fdc8bba8fde484f292d0a034b803fe39ac73d8
+05:48:09,416 INF packaging: Configuring (running scriptlet for): dbus-broker-21-6.fc31.x86_64 1564004553 ec0eb93eef4645c726c4e867a9fdc8bba8fde484f292d0a034b803fe39ac73d8
+05:48:09,477 INF packaging: Installed: rpm-build-libs-4.15.1-2.fc31.x86_64 1588579365 efae4780a506e1289640cf1feba34ce1542e476898af567082f4f78889eedd18
+05:48:09,490 INF packaging: Installed: python3-rpm-4.15.1-2.fc31.x86_64 1588579365 572a453a84b1bf7dc1455c475f8f7c3879b074f92a4a4dc42c4e5ef736cbd306
+05:48:09,506 INF packaging: Installed: python3-dnf-4.2.21-1.fc31.noarch 1585771821 f9f74e1e9a8ed303477595183b86e0909b9ec0f6fa6ee4fca71df25a722836a3
+05:48:09,653 INF packaging: Installed: dnf-4.2.21-1.fc31.noarch 1585771821 f8854439bfd57ea2b76583a3b7d480e4fe02d76c78c9d87a6d1fe16c7380733b
+05:48:09,665 INF packaging: Configuring (running scriptlet for): dnf-4.2.21-1.fc31.noarch 1585771821 f8854439bfd57ea2b76583a3b7d480e4fe02d76c78c9d87a6d1fe16c7380733b
+05:48:09,709 INF packaging: Installed: libsss_idmap-2.2.3-13.fc31.x86_64 1582777853 a87cddf03f27dcdf1db74cfc7abaa546e261afebb244696c265a3dfefeecb0ab
+05:48:09,723 INF packaging: Installed: libsss_nss_idmap-2.2.3-13.fc31.x86_64 1582777853 ffe29399f282165810a7740d86d40d3999ccf1ab87799af168b985c906440162
+05:48:09,733 INF packaging: Installed: sssd-client-2.2.3-13.fc31.x86_64 1582777853 d4f9e4a26da7cd906c3f84b35204dc03c6adac62c97642b56554d340cf45cb3f
+05:48:09,745 INF packaging: Configuring (running scriptlet for): sssd-client-2.2.3-13.fc31.x86_64 1582777853 d4f9e4a26da7cd906c3f84b35204dc03c6adac62c97642b56554d340cf45cb3f
+05:48:09,773 INF packaging: Installed: yum-4.2.21-1.fc31.noarch 1585771821 2f30d608c28964ed70126038c1524ee89f6a09048cbe0c893e2aeeaca4c8c51d
+05:48:09,776 INF packaging: Installed: sudo-1.9.0-0.1.b4.fc31.x86_64 1585301782 4022e2350fe73835009a08dc6f93d80b3671c6340e622cb023a8a083a291db9c
+05:48:09,822 INF packaging: Configuring (running scriptlet for): sudo-1.9.0-0.1.b4.fc31.x86_64 1585301782 4022e2350fe73835009a08dc6f93d80b3671c6340e622cb023a8a083a291db9c
+05:48:09,847 INF packaging: Installed: tar-2:1.32-2.fc31.x86_64 1564227116 9975496f29601a1c2cdb89e63aac698fdd8283ba3a52a9d91ead9473a0e064c8
+05:48:09,869 INF packaging: Installed: rootfiles-8.1-25.fc31.noarch 1564194792 d8e448aea6836b8a577ac6d342b52e20f9c52f51a28042fc78a7f30224f7b663
+05:48:09,871 INF packaging: Post installation setup phase started.
+05:48:09,872 INF packaging: Configuring (running scriptlet for): fedora-release-common-31-4.noarch 1588078211 08553755c556ebad76bf208feb685b4577fc45f0c5c0a7aa819c896a064f250b
+05:48:09,892 INF packaging: Configuring (running scriptlet for): filesystem-3.12-2.fc31.x86_64 1564014932 ce05d442cca1de33cb9b4dfb72b94d8b97a072e2add394e075131d395ef463ff
+05:48:09,914 INF packaging: Configuring (running scriptlet for): crypto-policies-20191128-2.gitcd267a5.fc31.noarch 1576518872 97eb30a16d427e68141071b871ce4104e62ea6a9182a26b2611f49bf76af7028
+05:48:10,117 INF packaging: Configuring (running scriptlet for): rootfiles-8.1-25.fc31.noarch 1564194792 d8e448aea6836b8a577ac6d342b52e20f9c52f51a28042fc78a7f30224f7b663
+05:48:10,168 INF packaging: Configuring (running scriptlet for): glibc-common-2.30-11.fc31.x86_64 1585010661 8a09c12a777fb39682798ab205dcaaab5145b0b2c398e9b30a4a793808be9ac5
+05:48:10,598 INF packaging: Configuring (running scriptlet for): glib2-2.62.6-1.fc31.x86_64 1584539710 7198e52cbe3b347fc7bdb96dd1da1ae5a0b95ec49bcdcecebcc38c9fc29eb40d
+05:48:10,642 INF packaging: Configuring (running scriptlet for): systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:10,673 INF packaging: Configuring (running scriptlet for): systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:10,694 INF packaging: Configuring (running scriptlet for): systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:10,715 INF packaging: Configuring (running scriptlet for): systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:10,764 INF packaging: Configuring (running scriptlet for): systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:10,822 Level 8 dnf: RPM transaction over.
+05:48:10,875 INF packaging: Verifying: acl-2.2.53-4.fc31.x86_64 1563989674 2015152c175a78e6da877565d946fe88f0a913052e580e599480884a9d7eb27d
+05:48:11,019 Level 8 dnf: timer: verify transaction: 190 ms
+05:48:11,020 Level 8 dnf: timer: transaction: 12124 ms
+05:48:11,022 Level 8 dnf: Cleaning up.
+05:48:11,022 INF packaging: Verifying: alternatives-1.11-5.fc31.x86_64 1563999277 7e818c6d664ab888801f5ef1a7d6e5921fee8e1202be6d5d5279869101782081
+05:48:11,023 INF packaging: Verifying: basesystem-11-8.fc31.noarch 1563995158 20ef955e5f735233a425725b9af41d960b5602dfb0ae812ae720e37c9bf8a292
+05:48:11,024 INF packaging: Verifying: brotli-1.0.7-6.fc31.x86_64 1563997082 2c58791f5b7f7c3489f28a20d1a34849aeadbeed68e306e349350b5c455779b1
+05:48:11,024 Level 8 dnf: /tmp/dnf.package.cache/gnupg2-2.2.18-2.fc31.x86_64.rpm removed
+05:48:11,025 Level 8 dnf: /tmp/dnf.package.cache/popt-1.16-18.fc31.x86_64.rpm removed
+05:48:11,025 INF packaging: Verifying: bzip2-libs-1.0.8-1.fc31.x86_64 1565095398 ac05bd748e0fa500220f46ed02c4a4a2117dfa88dec83ffca86af21546eb32d7
+05:48:11,025 Level 8 dnf: /tmp/dnf.package.cache/brotli-1.0.7-6.fc31.x86_64.rpm removed
+05:48:11,025 Level 8 dnf: /tmp/dnf.package.cache/npth-1.6-3.fc31.x86_64.rpm removed
+05:48:11,025 INF packaging: Verifying: cracklib-2.9.6-21.fc31.x86_64 1565362157 a2709e60bc43f50f75cda7e3b4b6910c2a04754127ef0851343a1c792b44d8a4
+05:48:11,026 Level 8 dnf: /tmp/dnf.package.cache/filesystem-3.12-2.fc31.x86_64.rpm removed
+05:48:11,026 Level 8 dnf: /tmp/dnf.package.cache/krb5-libs-1.17-46.fc31.x86_64.rpm removed
+05:48:11,026 INF packaging: Verifying: curl-7.66.0-1.fc31.x86_64 1568363208 9c682a651918df4fb389acb9a561be6fdf8f78d42b013891329083ff800b1d49
+05:48:11,026 Level 8 dnf: /tmp/dnf.package.cache/sssd-client-2.2.3-13.fc31.x86_64.rpm removed
+05:48:11,026 Level 8 dnf: /tmp/dnf.package.cache/libpcap-1.9.1-2.fc31.x86_64.rpm removed
+05:48:11,027 INF packaging: Verifying: dbus-1:1.12.16-3.fc31.x86_64 1564650671 5db4afe4279135df6a2274ac4ed15e58af5d7135d6a9b0c0207411b098f037ee
+05:48:11,027 Level 8 dnf: /tmp/dnf.package.cache/shadow-utils-4.6-18.fc31.x86_64.rpm removed
+05:48:11,027 Level 8 dnf: /tmp/dnf.package.cache/ncurses-libs-6.1-12.20190803.fc31.x86_64.rpm removed
+05:48:11,028 Level 8 dnf: /tmp/dnf.package.cache/rpm-sign-libs-4.15.1-2.fc31.x86_64.rpm removed
+05:48:11,028 INF packaging: Verifying: dbus-broker-21-6.fc31.x86_64 1564004553 ec0eb93eef4645c726c4e867a9fdc8bba8fde484f292d0a034b803fe39ac73d8
+05:48:11,029 INF packaging: Verifying: dbus-common-1:1.12.16-3.fc31.noarch 1564650786 2f167a2ae4a8c29b627918c1b0f89e0b38418c394a2e373f314dbf25449a167c
+05:48:11,029 INF packaging: Verifying: expat-2.2.8-1.fc31.x86_64 1568622776 d53b4a19789e80f5af881a9cde899b2f3c95d05b6ef20d6bf88272313720286f
+05:48:11,029 Level 8 dnf: /tmp/dnf.package.cache/ima-evm-utils-1.2.1-2.fc31.x86_64.rpm removed
+05:48:11,030 Level 8 dnf: /tmp/dnf.package.cache/setup-2.13.6-1.fc31.noarch.rpm removed
+05:48:11,030 INF packaging: Verifying: filesystem-3.12-2.fc31.x86_64 1564014932 ce05d442cca1de33cb9b4dfb72b94d8b97a072e2add394e075131d395ef463ff
+05:48:11,030 Level 8 dnf: /tmp/dnf.package.cache/zchunk-libs-1.1.5-1.fc31.x86_64.rpm removed
+05:48:11,031 Level 8 dnf: /tmp/dnf.package.cache/file-libs-5.37-8.fc31.x86_64.rpm removed
+05:48:11,031 INF packaging: Verifying: gawk-5.0.1-5.fc31.x86_64 1564019883 826ab0318f77a2dfcda2a9240560b6f9bd943e63371324a96b07674e7d8e5203
+05:48:11,031 Level 8 dnf: /tmp/dnf.package.cache/gdbm-libs-1.18.1-1.fc31.x86_64.rpm removed
+05:48:11,032 Level 8 dnf: /tmp/dnf.package.cache/rootfiles-8.1-25.fc31.noarch.rpm removed
+05:48:11,032 INF packaging: Verifying: gdbm-libs-1:1.18.1-1.fc31.x86_64 1570185613 fba574e749c579b5430887d37f513f1eb622a4ed66aec7e103230f1b5296ca84
+05:48:11,032 Level 8 dnf: /tmp/dnf.package.cache/curl-7.66.0-1.fc31.x86_64.rpm removed
+05:48:11,032 Level 8 dnf: /tmp/dnf.package.cache/crypto-policies-20191128-2.gitcd267a5.fc31.noarch.rpm removed
+05:48:11,032 Level 8 dnf: /tmp/dnf.package.cache/iptables-libs-1.8.3-7.fc31.x86_64.rpm removed
+05:48:11,032 INF packaging: Verifying: gmp-1:6.1.2-10.fc31.x86_64 1550745445 a2cc503ec5b820eebe5ea01d741dd8bbae9e8482248d76fc3dd09359482c3b5a
+05:48:11,032 Level 8 dnf: /tmp/dnf.package.cache/libgcrypt-1.8.5-1.fc31.x86_64.rpm removed
+05:48:11,033 Level 8 dnf: /tmp/dnf.package.cache/python3-libcomps-0.1.15-1.fc31.x86_64.rpm removed
+05:48:11,033 Level 8 dnf: /tmp/dnf.package.cache/zlib-1.2.11-20.fc31.x86_64.rpm removed
+05:48:11,033 Level 8 dnf: /tmp/dnf.package.cache/fedora-repos-31-3.noarch.rpm removed
+05:48:11,033 INF packaging: Verifying: gpgme-1.13.1-3.fc31.x86_64 1565439116 a598834d29d6669e782084b166c09d442ee30c09a41ab0120319f738cb31a86d
+05:48:11,033 Level 8 dnf: /tmp/dnf.package.cache/libnghttp2-1.40.0-1.fc31.x86_64.rpm removed
+05:48:11,034 Level 8 dnf: /tmp/dnf.package.cache/cryptsetup-libs-2.3.0-1.fc31.x86_64.rpm removed
+05:48:11,034 Level 8 dnf: /tmp/dnf.package.cache/device-mapper-libs-1.02.171-1.fc31.x86_64.rpm removed
+05:48:11,034 INF packaging: Verifying: grep-3.3-3.fc31.x86_64 1564065246 429d0c6cc38e9e3646ede67aa9d160f265a8f9cbe669e8eefd360a8316054ada
+05:48:11,034 Level 8 dnf: /tmp/dnf.package.cache/python3-rpm-4.15.1-2.fc31.x86_64.rpm removed
+05:48:11,035 Level 8 dnf: /tmp/dnf.package.cache/libxml2-2.9.10-3.fc31.x86_64.rpm removed
+05:48:11,035 INF packaging: Verifying: gzip-1.10-1.fc31.x86_64 1565334544 1f1ed6ed142b94b6ad53d11a1402417bc696a7a2c8cacaf25d12b7ba6db16f01
+05:48:11,035 Level 8 dnf: /tmp/dnf.package.cache/libverto-0.3.0-8.fc31.x86_64.rpm removed
+05:48:11,035 Level 8 dnf: /tmp/dnf.package.cache/bzip2-libs-1.0.8-1.fc31.x86_64.rpm removed
+05:48:11,035 Level 8 dnf: /tmp/dnf.package.cache/libselinux-2.9-5.fc31.x86_64.rpm removed
+05:48:11,036 INF packaging: Verifying: ima-evm-utils-1.2.1-2.fc31.x86_64 1564598252 efcf9db40d3554c93cd0ec593717f68f2bfeb68c2b102cb9a4650933d6783ac6
+05:48:11,036 Level 8 dnf: /tmp/dnf.package.cache/rpm-build-libs-4.15.1-2.fc31.x86_64.rpm removed
+05:48:11,036 Level 8 dnf: /tmp/dnf.package.cache/ncurses-base-6.1-12.20190803.fc31.noarch.rpm removed
+05:48:11,036 INF packaging: Verifying: keyutils-libs-1.6-3.fc31.x86_64 1564080208 cfdf9310e54bc09babd3b37ae0d4941a50bf460964e1e299d1000c50d93d01d1
+05:48:11,036 Level 8 dnf: /tmp/dnf.package.cache/dnf-4.2.21-1.fc31.noarch.rpm removed
+05:48:11,036 INF packaging: Verifying: kmod-libs-26-4.fc31.x86_64 1564082073 ac074fa439e3b877d37e03c74f5b34f4d28f2f18d8ee23d62bf1987fbc39cca1
+05:48:11,037 INF packaging: Verifying: libacl-2.2.53-4.fc31.x86_64 1563989674 910c6772942fa77b9aa855718dd077a14f130402e409c003474d7e53b45738bc
+05:48:11,037 Level 8 dnf: /tmp/dnf.package.cache/systemd-pam-243.8-1.fc31.x86_64.rpm removed
+05:48:11,037 Level 8 dnf: /tmp/dnf.package.cache/bash-5.0.11-1.fc31.x86_64.rpm removed
+05:48:11,037 INF packaging: Verifying: libargon2-20171227-3.fc31.x86_64 1563992534 380c550646d851548504adb7b42ed67fd51b8624b59525c11b85dad44d46d0de
+05:48:11,038 Level 8 dnf: /tmp/dnf.package.cache/libnsl2-1.2.0-5.20180605git4a062cf.fc31.x86_64.rpm removed
+05:48:11,038 INF packaging: Verifying: libassuan-2.5.3-2.fc31.x86_64 1566204325 bce6ac5968f13cce82decd26a934b9182e1fd8725d06c3597ae1e84bb62877f8
+05:48:11,038 Level 8 dnf: /tmp/dnf.package.cache/pam-1.3.1-21.fc31.x86_64.rpm removed
+05:48:11,038 INF packaging: Verifying: libattr-2.4.48-7.fc31.x86_64 1563994148 8ebb46ef920e5d9171424dd153e856744333f0b13480f12123e14c0adbd372be
+05:48:11,038 Level 8 dnf: /tmp/dnf.package.cache/libpsl-0.21.0-2.fc31.x86_64.rpm removed
+05:48:11,038 INF packaging: Verifying: libcap-2.26-6.fc31.x86_64 1564085579 752afa1afcc629d0de6850b51943acd93d37ee8802b85faede3082ea5b332090
+05:48:11,038 Level 8 dnf: /tmp/dnf.package.cache/fedora-release-container-31-4.noarch.rpm removed
+05:48:11,039 Level 8 dnf: /tmp/dnf.package.cache/libxcrypt-4.4.16-3.fc31.x86_64.rpm removed
+05:48:11,039 INF packaging: Verifying: libcurl-7.66.0-1.fc31.x86_64 1568363208 00fd71d1f1db947f65d49f0da03fa4cd22b84da73c31a564afc5203a6d437241
+05:48:11,039 Level 8 dnf: /tmp/dnf.package.cache/gpgme-1.13.1-3.fc31.x86_64.rpm removed
+05:48:11,039 Level 8 dnf: /tmp/dnf.package.cache/sed-4.5-4.fc31.x86_64.rpm removed
+05:48:11,039 INF packaging: Verifying: libdb-5.3.28-38.fc31.x86_64 1564086238 825f2b7c1cbd6bf5724dac4fe015d0bca0be1982150e9d4f40a9bd3ed6a5d8cc
+05:48:11,039 Level 8 dnf: /tmp/dnf.package.cache/libsigsegv-2.11-8.fc31.x86_64.rpm removed
+05:48:11,040 INF packaging: Verifying: libdb-utils-5.3.28-38.fc31.x86_64 1564086238 a9a2dd2fae52473c35c6677d4ac467bf81be20256916bf4e65379a0e97642627
+05:48:11,040 Level 8 dnf: /tmp/dnf.package.cache/systemd-243.8-1.fc31.x86_64.rpm removed
+05:48:11,040 INF packaging: Verifying: libffi-3.1-23.fc31.x86_64 1564087048 60c2bf4d0b3bd8184e509a2dc91ff673b89c011dcdf69084d298f2c23ef0b3f0
+05:48:11,040 Level 8 dnf: /tmp/dnf.package.cache/libunistring-0.9.10-6.fc31.x86_64.rpm removed
+05:48:11,041 INF packaging: Verifying: libgcrypt-1.8.5-1.fc31.x86_64 1567586852 2235a7ff5351a81a38e613feda0abee3a4cbc06512451d21ef029f4af9a9f30f
+05:48:11,041 Level 8 dnf: /tmp/dnf.package.cache/libblkid-2.34-4.fc31.x86_64.rpm removed
+05:48:11,041 INF packaging: Verifying: libgpg-error-1.36-2.fc31.x86_64 1565801735 2bda0490bdec6e85dab028721927971966caaca2b604785ca4b1ec686a245fbd
+05:48:11,041 Level 8 dnf: /tmp/dnf.package.cache/acl-2.2.53-4.fc31.x86_64.rpm removed
+05:48:11,041 Level 8 dnf: /tmp/dnf.package.cache/rpm-4.15.1-2.fc31.x86_64.rpm removed
+05:48:11,041 INF packaging: Verifying: libksba-1.3.5-10.fc31.x86_64 1564089463 ae113203e1116f53037511d3e02e5ef8dba57e3b53829629e8c54b00c740452f
+05:48:11,041 Level 8 dnf: /tmp/dnf.package.cache/python3-dnf-4.2.21-1.fc31.noarch.rpm removed
+05:48:11,042 INF packaging: Verifying: libmetalink-0.1.3-9.fc31.x86_64 1564090509 b743e78e345c1199d47d6d3710a4cdf93ff1ac542ae188035b4a858bc0791a43
+05:48:11,042 Level 8 dnf: /tmp/dnf.package.cache/glib2-2.62.6-1.fc31.x86_64.rpm removed
+05:48:11,042 INF packaging: Verifying: libnsl2-1.2.0-5.20180605git4a062cf.fc31.x86_64 1564092258 d50d6b0120430cf78af612aad9b7fd94c3693dffadebc9103a661cc24ae51b6a
+05:48:11,042 Level 8 dnf: /tmp/dnf.package.cache/dnf-data-4.2.21-1.fc31.noarch.rpm removed
+05:48:11,042 Level 8 dnf: /tmp/dnf.package.cache/p11-kit-trust-0.23.20-1.fc31.x86_64.rpm removed
+05:48:11,043 INF packaging: Verifying: libpsl-0.21.0-2.fc31.x86_64 1564093504 71b445c5ef5ff7dbc24383fe81154b1b4db522cd92442c6b2a162e9c989ab730
+05:48:11,043 Level 8 dnf: /tmp/dnf.package.cache/libgpg-error-1.36-2.fc31.x86_64.rpm removed
+05:48:11,043 Level 8 dnf: /tmp/dnf.package.cache/openssl-1.1.1g-1.fc31.x86_64.rpm removed
+05:48:11,043 INF packaging: Verifying: libselinux-2.9-5.fc31.x86_64 1565619201 b75fe6088e737720ea81a9377655874e6ac6919600a5652576f9ebb0d9232e5e
+05:48:11,043 INF packaging: Verifying: libsemanage-2.9-3.fc31.x86_64 1565728736 fd2f883d0bda59af039ac2176d3fb7b58d0bf173f5ad03128c2f18196886eb32
+05:48:11,044 Level 8 dnf: /tmp/dnf.package.cache/util-linux-2.34-4.fc31.x86_64.rpm removed
+05:48:11,044 INF packaging: Verifying: libsepol-2.9-2.fc31.x86_64 1564094791 2ebd4efba62115da56ed54b7f0a5c2817f9acd29242a0334f62e8c645b81534f
+05:48:11,044 Level 8 dnf: /tmp/dnf.package.cache/libmodulemd-2.9.3-1.fc31.x86_64.rpm removed
+05:48:11,044 Level 8 dnf: /tmp/dnf.package.cache/dbus-common-1.12.16-3.fc31.noarch.rpm removed
+05:48:11,044 INF packaging: Verifying: libsigsegv-2.11-8.fc31.x86_64 1564095050 1b14f1e30220d6ae5c9916595f989eba6a26338d34a9c851fed9ef603e17c2c4
+05:48:11,044 Level 8 dnf: /tmp/dnf.package.cache/libseccomp-2.4.2-2.fc31.x86_64.rpm removed
+05:48:11,045 Level 8 dnf: /tmp/dnf.package.cache/libyaml-0.2.2-2.fc31.x86_64.rpm removed
+05:48:11,045 INF packaging: Verifying: libtasn1-4.14-2.fc31.x86_64 1564095864 4d2b475e56aba896dbf12616e57c5e6c2651a864d4d9376d08ed77c9e2dd5fbb
+05:48:11,045 Level 8 dnf: /tmp/dnf.package.cache/sqlite-libs-3.30.0-1.fc31.x86_64.rpm removed
+05:48:11,045 INF packaging: Verifying: libunistring-0.9.10-6.fc31.x86_64 1564096403 67f494374ee07d581d587388ab95b7625005338f5af87a257bdbb1e26a3b6a42
+05:48:11,045 Level 8 dnf: /tmp/dnf.package.cache/tss2-1331-2.fc31.x86_64.rpm removed
+05:48:11,046 Level 8 dnf: /tmp/dnf.package.cache/glibc-minimal-langpack-2.30-11.fc31.x86_64.rpm removed
+05:48:11,046 INF packaging: Verifying: libusbx-1.0.22-4.fc31.x86_64 1564096581 66fce2375c456c539e23ed29eb3b62a08a51c90cde0364112e8eb06e344ad4e8
+05:48:11,046 Level 8 dnf: /tmp/dnf.package.cache/glibc-common-2.30-11.fc31.x86_64.rpm removed
+05:48:11,046 INF packaging: Verifying: libutempter-1.1.6-17.fc31.x86_64 1564096592 226888f99cd9c731e97b92b8832c14a9a5842f37f37f6b10707cbaadbff20cf5
+05:48:11,046 Level 8 dnf: /tmp/dnf.package.cache/python-pip-wheel-19.1.1-8.fc31.noarch.rpm removed
+05:48:11,046 INF packaging: Verifying: libverto-0.3.0-8.fc31.x86_64 1564096673 9e462579825ae480e28c42b135742278e38777eb49d4e967b90051b2a4269348
+05:48:11,047 Level 8 dnf: /tmp/dnf.package.cache/cracklib-2.9.6-21.fc31.x86_64.rpm removed
+05:48:11,047 Level 8 dnf: /tmp/dnf.package.cache/libssh-config-0.9.4-2.fc31.noarch.rpm removed
+05:48:11,047 INF packaging: Verifying: libyaml-0.2.2-2.fc31.x86_64 1564097512 7a98f9fce4b9a981957cb81ce60b2a4847d2dd3a3b15889f8388a66de0b15e34
+05:48:11,047 Level 8 dnf: /tmp/dnf.package.cache/pcre-8.44-1.fc31.x86_64.rpm removed
+05:48:11,047 Level 8 dnf: /tmp/dnf.package.cache/kmod-libs-26-4.fc31.x86_64.rpm removed
+05:48:11,047 INF packaging: Verifying: lua-libs-5.3.5-6.fc31.x86_64 1564100711 cba15cfd9912ae8afce2f4a0b22036f68c6c313147106a42ebb79b6f9d1b3e1a
+05:48:11,047 Level 8 dnf: /tmp/dnf.package.cache/libdb-5.3.28-38.fc31.x86_64.rpm removed
+05:48:11,048 Level 8 dnf: /tmp/dnf.package.cache/pcre2-syntax-10.34-9.fc31.noarch.rpm removed
+05:48:11,048 INF packaging: Verifying: lz4-libs-1.9.1-1.fc31.x86_64 1566118168 9f3414d124857fd37b22714d2ffadaa35a00a7126e5d0d6e25bbe089afc87b39
+05:48:11,048 Level 8 dnf: /tmp/dnf.package.cache/ncurses-6.1-12.20190803.fc31.x86_64.rpm removed
+05:48:11,048 INF packaging: Verifying: mpfr-3.1.6-5.fc31.x86_64 1564112525 d6d33ad8240f6e73518056f0fe1197cb8da8dc2eae5c0348fde6252768926bd2
+05:48:11,048 Level 8 dnf: /tmp/dnf.package.cache/tar-1.32-2.fc31.x86_64.rpm removed
+05:48:11,048 INF packaging: Verifying: ncurses-6.1-12.20190803.fc31.x86_64 1565169550 19315dc93ffb895caa890949f368aede374497019088872238841361fa06f519
+05:48:11,049 Level 8 dnf: /tmp/dnf.package.cache/libssh-0.9.4-2.fc31.x86_64.rpm removed
+05:48:11,049 Level 8 dnf: /tmp/dnf.package.cache/readline-8.0-3.fc31.x86_64.rpm removed
+05:48:11,049 INF packaging: Verifying: ncurses-base-6.1-12.20190803.fc31.noarch 1565169667 cbd9d78da00aea6c1e98398fe883d5566971b3bc6764a07c5e945cd317013686
+05:48:11,049 Level 8 dnf: /tmp/dnf.package.cache/openldap-2.4.47-3.fc31.x86_64.rpm removed
+05:48:11,049 INF packaging: Verifying: ncurses-libs-6.1-12.20190803.fc31.x86_64 1565169550 7b3ba4cdf8c0f1c4c807435d7b7a4a93ecb02737a95d064f3f20299e5bb3a106
+05:48:11,049 Level 8 dnf: /tmp/dnf.package.cache/elfutils-default-yama-scope-0.179-2.fc31.noarch.rpm removed
+05:48:11,050 Level 8 dnf: /tmp/dnf.package.cache/python-setuptools-wheel-41.6.0-1.fc31.noarch.rpm removed
+05:48:11,050 INF packaging: Verifying: nettle-3.5.1-3.fc31.x86_64 1564116136 429d5b9a845285710b7baad1cdc96be74addbf878011642cfc7c14b5636e9bcc
+05:48:11,050 Level 8 dnf: /tmp/dnf.package.cache/libgomp-9.3.1-2.fc31.x86_64.rpm removed
+05:48:11,050 Level 8 dnf: /tmp/dnf.package.cache/libsepol-2.9-2.fc31.x86_64.rpm removed
+05:48:11,050 INF packaging: Verifying: npth-1.6-3.fc31.x86_64 1564126123 be1666f539d60e783cdcb7be2bc28bf427a873a88a79e3fd1ea4efd7f470bfd2
+05:48:11,050 Level 8 dnf: /tmp/dnf.package.cache/elfutils-libs-0.179-2.fc31.x86_64.rpm removed
+05:48:11,051 INF packaging: Verifying: openldap-2.4.47-3.fc31.x86_64 1564132479 b4989c0bc1b0da45440f2eaf1f37f151b8022c8509700a3d5273e4054b545c38
+05:48:11,051 Level 8 dnf: /tmp/dnf.package.cache/gmp-6.1.2-10.fc31.x86_64.rpm removed
+05:48:11,051 INF packaging: Verifying: popt-1.16-18.fc31.x86_64 1564169881 7ad348ab75f7c537ab1afad01e643653a30357cdd6e24faf006afd48447de632
+05:48:11,051 Level 8 dnf: /tmp/dnf.package.cache/openssl-libs-1.1.1g-1.fc31.x86_64.rpm removed
+05:48:11,051 INF packaging: Verifying: publicsuffix-list-dafsa-20190417-2.fc31.noarch 1564174250 359d74d5f3988e1c2c5327f9d4ea59d0c49a2383541928084ef00383d70b6d55
+05:48:11,052 Level 8 dnf: /tmp/dnf.package.cache/fedora-gpg-keys-31-3.noarch.rpm removed
+05:48:11,052 INF packaging: Verifying: python3-gpg-1.13.1-3.fc31.x86_64 1565439116 6372f7a295f1a0860c1540a63d0b25b4741f3c427d5221dc99e03e711415645a
+05:48:11,052 Level 8 dnf: /tmp/dnf.package.cache/coreutils-common-8.31-10.fc31.x86_64.rpm removed
+05:48:11,052 Level 8 dnf: /tmp/dnf.package.cache/libmount-2.34-4.fc31.x86_64.rpm removed
+05:48:11,052 INF packaging: Verifying: qrencode-libs-4.0.2-4.fc31.x86_64 1564190465 ff88817ffbbc5dc2f19e5b64dc2947f95477563bf22a97b90895d1a75539028d
+05:48:11,052 Level 8 dnf: /tmp/dnf.package.cache/libidn2-2.3.0-1.fc31.x86_64.rpm removed
+05:48:11,052 Level 8 dnf: /tmp/dnf.package.cache/libcap-2.26-6.fc31.x86_64.rpm removed
+05:48:11,053 Level 8 dnf: /tmp/dnf.package.cache/fedora-release-common-31-4.noarch.rpm removed
+05:48:11,053 INF packaging: Verifying: readline-8.0-3.fc31.x86_64 1564193537 228280fc7891c414da49b657768e98dcda96462e10a9998edb89f8910cd5f7dc
+05:48:11,053 Level 8 dnf: /tmp/dnf.package.cache/expat-2.2.8-1.fc31.x86_64.rpm removed
+05:48:11,053 Level 8 dnf: /tmp/dnf.package.cache/libuuid-2.34-4.fc31.x86_64.rpm removed
+05:48:11,053 Level 8 dnf: /tmp/dnf.package.cache/libsmartcols-2.34-4.fc31.x86_64.rpm removed
+05:48:11,053 INF packaging: Verifying: rootfiles-8.1-25.fc31.noarch 1564194792 d8e448aea6836b8a577ac6d342b52e20f9c52f51a28042fc78a7f30224f7b663
+05:48:11,053 Level 8 dnf: /tmp/dnf.package.cache/vim-minimal-8.2.694-1.fc31.x86_64.rpm removed
+05:48:11,053 Level 8 dnf: /tmp/dnf.package.cache/ca-certificates-2020.2.40-1.1.fc31.noarch.rpm removed
+05:48:11,053 Level 8 dnf: /tmp/dnf.package.cache/elfutils-libelf-0.179-2.fc31.x86_64.rpm removed
+05:48:11,054 INF packaging: Verifying: sed-4.5-4.fc31.x86_64 1564213393 deb934183f8554669821baf08d13a85b729a037fb6e4b60ad3894c996063a165
+05:48:11,054 Level 8 dnf: /tmp/dnf.package.cache/audit-libs-3.0-0.15.20191104git1c2f876.fc31.x86_64.rpm removed
+05:48:11,054 Level 8 dnf: /tmp/dnf.package.cache/sudo-1.9.0-0.1.b4.fc31.x86_64.rpm removed
+05:48:11,054 Level 8 dnf: /tmp/dnf.package.cache/libmetalink-0.1.3-9.fc31.x86_64.rpm removed
+05:48:11,054 INF packaging: Verifying: tar-2:1.32-2.fc31.x86_64 1564227116 9975496f29601a1c2cdb89e63aac698fdd8283ba3a52a9d91ead9473a0e064c8
+05:48:11,054 Level 8 dnf: /tmp/dnf.package.cache/systemd-libs-243.8-1.fc31.x86_64.rpm removed
+05:48:11,054 Level 8 dnf: /tmp/dnf.package.cache/libcurl-7.66.0-1.fc31.x86_64.rpm removed
+05:48:11,054 INF packaging: Verifying: tss2-1331-2.fc31.x86_64 1564232435 afb7f560c368bfc13c4f0885638b47ae5c3352ac726625f56a9ce6f492bc798f
+05:48:11,054 Level 8 dnf: /tmp/dnf.package.cache/p11-kit-0.23.20-1.fc31.x86_64.rpm removed
+05:48:11,055 Level 8 dnf: /tmp/dnf.package.cache/libgcc-9.3.1-2.fc31.x86_64.rpm removed
+05:48:11,055 Level 8 dnf: /tmp/dnf.package.cache/qrencode-libs-4.0.2-4.fc31.x86_64.rpm removed
+05:48:11,055 Level 8 dnf: /tmp/dnf.package.cache/libksba-1.3.5-10.fc31.x86_64.rpm removed
+05:48:11,055 INF packaging: Verifying: xz-libs-5.2.4-6.fc31.x86_64 1564247130 841b13203994dc0184da601d51712a9d83aa239ae9b3eaef5e7e372d3063a431
+05:48:11,055 Level 8 dnf: /tmp/dnf.package.cache/rpm-libs-4.15.1-2.fc31.x86_64.rpm removed
+05:48:11,055 Level 8 dnf: /tmp/dnf.package.cache/yum-4.2.21-1.fc31.noarch.rpm removed
+05:48:11,055 INF packaging: Verifying: audit-libs-3.0-0.15.20191104git1c2f876.fc31.x86_64 1572900218 63753f2e3db033350e2350b5d2b3b1e3465f45dff8556b3b76a4b942edd206d0
+05:48:11,055 Level 8 dnf: /tmp/dnf.package.cache/gnutls-3.6.13-1.fc31.x86_64.rpm removed
+05:48:11,056 Level 8 dnf: /tmp/dnf.package.cache/coreutils-8.31-10.fc31.x86_64.rpm removed
+05:48:11,056 Level 8 dnf: /tmp/dnf.package.cache/libreport-filesystem-2.12.0-1.fc31.noarch.rpm removed
+05:48:11,056 INF packaging: Verifying: bash-5.0.11-1.fc31.x86_64 1575634080 6dad98ebaba9b1c46684d7e7acb835ffcf7f1e0e3a697d8351e8938f66e99a1d
+05:48:11,056 Level 8 dnf: /tmp/dnf.package.cache/libsss_idmap-2.2.3-13.fc31.x86_64.rpm removed
+05:48:11,056 Level 8 dnf: /tmp/dnf.package.cache/libdnf-0.47.0-1.fc31.x86_64.rpm removed
+05:48:11,056 Level 8 dnf: /tmp/dnf.package.cache/libtasn1-4.14-2.fc31.x86_64.rpm removed
+05:48:11,056 INF packaging: Verifying: ca-certificates-2020.2.40-1.1.fc31.noarch 1580387588 9c423d064631aa59a1986f1539180c57800f47426e3460b17fb2172462b7555b
+05:48:11,056 Level 8 dnf: /tmp/dnf.package.cache/librepo-1.11.3-1.fc31.x86_64.rpm removed
+05:48:11,056 Level 8 dnf: /tmp/dnf.package.cache/python3-libdnf-0.47.0-1.fc31.x86_64.rpm removed
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/libassuan-2.5.3-2.fc31.x86_64.rpm removed
+05:48:11,057 INF packaging: Verifying: coreutils-8.31-10.fc31.x86_64 1587648886 7536e5fb1fb7531b8e2dd5c05b5a2b173eb607225ed46d8d9a8464eabd1a71f3
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/libzstd-1.4.4-1.fc31.x86_64.rpm removed
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/libarchive-3.4.2-1.fc31.x86_64.rpm removed
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/gzip-1.10-1.fc31.x86_64.rpm removed
+05:48:11,057 INF packaging: Verifying: coreutils-common-8.31-10.fc31.x86_64 1587648886 61d65fe9789c1153966b90e83f8670039789ce104f307b6b0061a185de71787d
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/libcap-ng-0.7.10-1.fc31.x86_64.rpm removed
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/alternatives-1.11-5.fc31.x86_64.rpm removed
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/dbus-1.12.16-3.fc31.x86_64.rpm removed
+05:48:11,057 Level 8 dnf: /tmp/dnf.package.cache/libcomps-0.1.15-1.fc31.x86_64.rpm removed
+05:48:11,058 INF packaging: Verifying: crypto-policies-20191128-2.gitcd267a5.fc31.noarch 1576518872 97eb30a16d427e68141071b871ce4104e62ea6a9182a26b2611f49bf76af7028
+05:48:11,058 Level 8 dnf: /tmp/dnf.package.cache/dbus-broker-21-6.fc31.x86_64.rpm removed
+05:48:11,058 Level 8 dnf: /tmp/dnf.package.cache/pcre2-10.34-9.fc31.x86_64.rpm removed
+05:48:11,058 Level 8 dnf: /tmp/dnf.package.cache/python3-3.7.7-1.fc31.x86_64.rpm removed
+05:48:11,058 INF packaging: Verifying: cryptsetup-libs-2.3.0-1.fc31.x86_64 1581063661 35e607af339d1d07f67ffc1ba564c3fe028b671df33868e76d4ed9b09ef8f78b
+05:48:11,058 Level 8 dnf: /tmp/dnf.package.cache/nettle-3.5.1-3.fc31.x86_64.rpm removed
+05:48:11,058 Level 8 dnf: /tmp/dnf.package.cache/libsolv-0.7.12-1.fc31.x86_64.rpm removed
+05:48:11,058 Level 8 dnf: /tmp/dnf.package.cache/device-mapper-1.02.171-1.fc31.x86_64.rpm removed
+05:48:11,058 INF packaging: Verifying: cyrus-sasl-lib-2.1.27-3.fc31.x86_64 1584644085 c9aa2944f0c1a84844eef21063ad3fe5ad7fc548cc4be7cd00591fa0acca5a5f
+05:48:11,058 Level 8 dnf: /tmp/dnf.package.cache/libsss_nss_idmap-2.2.3-13.fc31.x86_64.rpm removed
+05:48:11,059 Level 8 dnf: /tmp/dnf.package.cache/json-c-0.13.1-11.fc31.x86_64.rpm removed
+05:48:11,059 Level 8 dnf: /tmp/dnf.package.cache/publicsuffix-list-dafsa-20190417-2.fc31.noarch.rpm removed
+05:48:11,059 INF packaging: Verifying: device-mapper-1.02.171-1.fc31.x86_64 1585243053 a532b72993cb867fe1811ee4bd96a2060ed9910ffa2dd0bfbb7f0b347f1faf45
+05:48:11,059 Level 8 dnf: /tmp/dnf.package.cache/libstdc++-9.3.1-2.fc31.x86_64.rpm removed
+05:48:11,059 Level 8 dnf: /tmp/dnf.package.cache/lua-libs-5.3.5-6.fc31.x86_64.rpm removed
+05:48:11,059 Level 8 dnf: /tmp/dnf.package.cache/grep-3.3-3.fc31.x86_64.rpm removed
+05:48:11,059 Level 8 dnf: /tmp/dnf.package.cache/libargon2-20171227-3.fc31.x86_64.rpm removed
+05:48:11,059 INF packaging: Verifying: device-mapper-libs-1.02.171-1.fc31.x86_64 1585243053 53ecaa8eb8cfd574d8c6ead4b720ff7702dc9d7c506f1d28f3424158a04b5cf7
+05:48:11,059 Level 8 dnf: /tmp/dnf.package.cache/python3-hawkey-0.47.0-1.fc31.x86_64.rpm removed
+05:48:11,060 Level 8 dnf: /tmp/dnf.package.cache/mpfr-3.1.6-5.fc31.x86_64.rpm removed
+05:48:11,060 INF packaging: Verifying: dnf-4.2.21-1.fc31.noarch 1585771821 f8854439bfd57ea2b76583a3b7d480e4fe02d76c78c9d87a6d1fe16c7380733b
+05:48:11,060 Level 8 dnf: /tmp/dnf.package.cache/glibc-2.30-11.fc31.x86_64.rpm removed
+05:48:11,060 Level 8 dnf: /tmp/dnf.package.cache/python3-gpg-1.13.1-3.fc31.x86_64.rpm removed
+05:48:11,060 INF packaging: Verifying: dnf-data-4.2.21-1.fc31.noarch 1585771821 ea7329ac24c74f10a96dba09b316e5479e3df8a5e30491fccbc027db0b99b327
+05:48:11,060 Level 8 dnf: /tmp/dnf.package.cache/xz-libs-5.2.4-6.fc31.x86_64.rpm removed
+05:48:11,060 Level 8 dnf: /tmp/dnf.package.cache/tzdata-2019c-2.fc31.noarch.rpm removed
+05:48:11,061 Level 8 dnf: /tmp/dnf.package.cache/libcom_err-1.45.5-1.fc31.x86_64.rpm removed
+05:48:11,061 INF packaging: Verifying: elfutils-default-yama-scope-0.179-2.fc31.noarch 1588288848 3777adf9146c0e381b5e0b774831ed1046aa5140fd7b23087ae2c03f3ae7f441
+05:48:11,061 INF packaging: Verifying: elfutils-libelf-0.179-2.fc31.x86_64 1588288792 64d6b94c78f7482bea38e45297225b05203277cb63731c694fdea80efbdc75e5
+05:48:11,061 Level 8 dnf: /tmp/dnf.package.cache/python3-libs-3.7.7-1.fc31.x86_64.rpm removed
+05:48:11,061 INF packaging: Verifying: elfutils-libs-0.179-2.fc31.x86_64 1588288792 1457208615dfcaaa15cf7d59f8cf9fba11b7ceb7d26cc0ad77b040ba295c7232
+05:48:11,061 Level 8 dnf: /tmp/dnf.package.cache/lz4-libs-1.9.1-1.fc31.x86_64.rpm removed
+05:48:11,062 Level 8 dnf: /tmp/dnf.package.cache/basesystem-11-8.fc31.noarch.rpm removed
+05:48:11,062 Level 8 dnf: /tmp/dnf.package.cache/gawk-5.0.1-5.fc31.x86_64.rpm removed
+05:48:11,062 Level 8 dnf: /tmp/dnf.package.cache/libacl-2.2.53-4.fc31.x86_64.rpm removed
+05:48:11,062 INF packaging: Verifying: fedora-gpg-keys-31-3.noarch 1587172180 ee0d7e5508b94fdc3ccf787deefb41047683dd1d55f2c38676a901b76c45f25e
+05:48:11,062 Level 8 dnf: /tmp/dnf.package.cache/libsemanage-2.9-3.fc31.x86_64.rpm removed
+05:48:11,062 Level 8 dnf: /tmp/dnf.package.cache/libpwquality-1.4.2-1.fc31.x86_64.rpm removed
+05:48:11,062 Level 8 dnf: /tmp/dnf.package.cache/cyrus-sasl-lib-2.1.27-3.fc31.x86_64.rpm removed
+05:48:11,062 INF packaging: Verifying: fedora-release-common-31-4.noarch 1588078211 08553755c556ebad76bf208feb685b4577fc45f0c5c0a7aa819c896a064f250b
+05:48:11,062 Level 8 dnf: /tmp/dnf.package.cache/libusbx-1.0.22-4.fc31.x86_64.rpm removed
+05:48:11,063 Level 8 dnf: /tmp/dnf.package.cache/libtirpc-1.2.6-0.fc31.x86_64.rpm removed
+05:48:11,063 Level 8 dnf: /tmp/dnf.package.cache/keyutils-libs-1.6-3.fc31.x86_64.rpm removed
+05:48:11,063 Level 8 dnf: /tmp/dnf.package.cache/libutempter-1.1.6-17.fc31.x86_64.rpm removed
+05:48:11,063 INF packaging: Verifying: fedora-release-container-31-4.noarch 1588078211 cf2d4f349c38f646551df057d064f2677cef6f4b21fbbd03b1ac91b57837c68f
+05:48:11,063 Level 8 dnf: /tmp/dnf.package.cache/systemd-rpm-macros-243.8-1.fc31.noarch.rpm removed
+05:48:11,063 Level 8 dnf: /tmp/dnf.package.cache/libattr-2.4.48-7.fc31.x86_64.rpm removed
+05:48:11,063 Level 8 dnf: /tmp/dnf.package.cache/libfdisk-2.34-4.fc31.x86_64.rpm removed
+05:48:11,063 INF packaging: Verifying: fedora-repos-31-3.noarch 1587172180 9f7962cead7303cc07772140b5dfd387808ad9bb470cb0d77ee59b2c4579a5fb
+05:48:11,063 Level 8 dnf: /tmp/dnf.package.cache/libffi-3.1-23.fc31.x86_64.rpm removed
+05:48:11,064 Level 8 dnf: /tmp/dnf.package.cache/libdb-utils-5.3.28-38.fc31.x86_64.rpm removed
+05:48:11,064 INF packaging: Verifying: file-libs-5.37-8.fc31.x86_64 1571989637 94d926b2b04924ddfaec4bdbd39675284ec72b2d29582da722ed6865e5be28f2
+05:48:11,064 INF packaging: Verifying: glib2-2.62.6-1.fc31.x86_64 1584539710 7198e52cbe3b347fc7bdb96dd1da1ae5a0b95ec49bcdcecebcc38c9fc29eb40d
+05:48:11,065 INF packaging: Verifying: glibc-2.30-11.fc31.x86_64 1585010661 14c428d8f2f9e4297fccb2cb972216926c7ab82ed417d8299cc0d4b4a2c0f341
+05:48:11,065 INF packaging: Verifying: glibc-common-2.30-11.fc31.x86_64 1585010661 8a09c12a777fb39682798ab205dcaaab5145b0b2c398e9b30a4a793808be9ac5
+05:48:11,066 INF packaging: Verifying: glibc-minimal-langpack-2.30-11.fc31.x86_64 1585010661 9e3f2c859a563563c9e09f1d2880000dacda708cad2e56d569fe85996c38718a
+05:48:11,066 INF packaging: Verifying: gnupg2-2.2.18-2.fc31.x86_64 1575622917 0df42f814bd6003030bf5d691c41806ae2697e6d204d52d65d0eebd25aef7a08
+05:48:11,067 INF packaging: Verifying: gnutls-3.6.13-1.fc31.x86_64 1585654880 29d2311fb52b105a1cdeea3b986807c4394df778933170c3e42977b147e5d721
+05:48:11,067 INF packaging: Verifying: iptables-libs-1.8.3-7.fc31.x86_64 1576767209 15ea2a6fd6e74ca0f9bd926550386f418d2745138a95b5118954b85289280191
+05:48:11,068 INF packaging: Verifying: json-c-0.13.1-11.fc31.x86_64 1586708712 f32890061b1d1687667aa06c15843d0d400a769c4d8c62451d8a78467ed9b90e
+05:48:11,068 INF packaging: Verifying: krb5-libs-1.17-46.fc31.x86_64 1581002701 604e53051da9b17f3667ece52d0049b09e20dbe8013e2f4c071a0ee1bf63e180
+05:48:11,069 INF packaging: Verifying: libarchive-3.4.2-1.fc31.x86_64 1581499306 286ca8cede1212373c17733e85e9ffa9b2d9243d55b6441c7b8ab48742c03d78
+05:48:11,069 INF packaging: Verifying: libblkid-2.34-4.fc31.x86_64 1576514871 63c15472dde1ef00cb5c5d0d0a6d4aad9dbe5d48ec72b63b02e3a96670d03c64
+05:48:11,069 INF packaging: Verifying: libcap-ng-0.7.10-1.fc31.x86_64 1569956138 9b64783d0b9b12b815ddf4f53d194776231097f872277e859f04119e63207eb9
+05:48:11,070 INF packaging: Verifying: libcom_err-1.45.5-1.fc31.x86_64 1579182726 12113b67b6fa5569bd2ae99be6f3c5aaced0d6c8f0a2b282e78db744dd2dcb08
+05:48:11,070 INF packaging: Verifying: libcomps-0.1.15-1.fc31.x86_64 1585745825 52e925b95581167102329781d4fa61e492dc9fef290fb8f6ab028d19a6c42362
+05:48:11,071 INF packaging: Verifying: libdnf-0.47.0-1.fc31.x86_64 1585765126 567180397ac6e470169105fca6388a243ada236958758332f3b347104260c35d
+05:48:11,071 INF packaging: Verifying: libfdisk-2.34-4.fc31.x86_64 1576514871 fe265b8a6bd7ca56b50362891c58abefee115b621056d9dfcdfb42c616dfc3f7
+05:48:11,072 INF packaging: Verifying: libgcc-9.3.1-2.fc31.x86_64 1586350836 1075e1a4fdc55576b51adb5f7ae5aa89453b836d64244bab4cb043fedadfffde
+05:48:11,072 INF packaging: Verifying: libgomp-9.3.1-2.fc31.x86_64 1586350836 a7f133ef55e7c86f3241fde30fd7ce7443d7218b8c9258371a69be76882635cb
+05:48:11,073 INF packaging: Verifying: libidn2-2.3.0-1.fc31.x86_64 1573930144 05afd94818d821b720270bbf0353a7699660153915a616b5885ca76379342a45
+05:48:11,073 INF packaging: Verifying: libmodulemd-2.9.3-1.fc31.x86_64 1586359840 4d3f73e6e3d4cc2f654839df6f8971c5c647b313f7563172e33371975d8d8201
+05:48:11,073 INF packaging: Verifying: libmount-2.34-4.fc31.x86_64 1576514871 1d63c92cefba615165f27888e7a401d4ec75963b12fd3071c24721b5e38310fa
+05:48:11,074 INF packaging: Verifying: libnghttp2-1.40.0-1.fc31.x86_64 1581001291 e802de8c623a9f1c4343b4c39d96182429c794af4a079b36096b2e2ad1f6a457
+05:48:11,074 INF packaging: Verifying: libpcap-14:1.9.1-2.fc31.x86_64 1582552341 8665be9710ff1be353c75781829567d581e68cb12b22b1a66ec0dd7379516476
+05:48:11,075 INF packaging: Verifying: libpwquality-1.4.2-1.fc31.x86_64 1572524723 7d3a65ab6027372ed789c292c4e0670094ba4b769ced67d44b6cc832909c1b27
+05:48:11,075 INF packaging: Verifying: librepo-1.11.3-1.fc31.x86_64 1585746524 38a9cf0b3286f9b029a5fe18cbf3196aa638afb98d52b90ce3a98b4fb2f5a11c
+05:48:11,076 INF packaging: Verifying: libreport-filesystem-2.12.0-1.fc31.noarch 1581005979 5e5a3eb8e202a20d22211082dbcd115979a46cff9e04ded37d3a5c7ef95f048f
+05:48:11,076 INF packaging: Verifying: libseccomp-2.4.2-2.fc31.x86_64 1576549722 4956123e62e4698a46e2844111ce2e7282900953de4a5f2f501d548f7d4d064d
+05:48:11,077 INF packaging: Verifying: libsmartcols-2.34-4.fc31.x86_64 1576514871 3d90b7fd0cd320d87adeea55a9b1ea64524d069b784b969339a7ad55708eac59
+05:48:11,077 INF packaging: Verifying: libsolv-0.7.12-1.fc31.x86_64 1587449634 8b499879fb5e01211160e3b3ca3743159d1ccc20a6c3b5bcdf3d16c2ac47e50b
+05:48:11,078 INF packaging: Verifying: libssh-0.9.4-2.fc31.x86_64 1586968600 ceb9f023e4ce19044f677d6df0102ad1d60bcb7ce5d3e0e1637ce416acd15b3f
+05:48:11,078 INF packaging: Verifying: libssh-config-0.9.4-2.fc31.noarch 1586968625 694967115b0519904b99b10d8acc6e4d56950fa671f5605c33e7e42de0e05a2e
+05:48:11,078 INF packaging: Verifying: libsss_idmap-2.2.3-13.fc31.x86_64 1582777853 a87cddf03f27dcdf1db74cfc7abaa546e261afebb244696c265a3dfefeecb0ab
+05:48:11,079 INF packaging: Verifying: libsss_nss_idmap-2.2.3-13.fc31.x86_64 1582777853 ffe29399f282165810a7740d86d40d3999ccf1ab87799af168b985c906440162
+05:48:11,079 INF packaging: Verifying: libstdc++-9.3.1-2.fc31.x86_64 1586350836 d122a01e5dd44bbcff8b0568df5e6b0d01ca728215ddaa16a1bec57c6461af66
+05:48:11,080 INF packaging: Verifying: libtirpc-1.2.6-0.fc31.x86_64 1586878677 d4064e680dca43bdbfc0111d97f9257c0ed026c46e6ab6237e5dabc0db10e93e
+05:48:11,080 INF packaging: Verifying: libuuid-2.34-4.fc31.x86_64 1576514871 fc62141e33e641e26f470c60dddac9b7f2f7af0f4e479fc9f9fb3908e5567884
+05:48:11,080 INF packaging: Verifying: libxcrypt-4.4.16-3.fc31.x86_64 1587799582 5056b489f11f49767109ce6c218b5fce195d11f48677c8e4ea19ed54b0542e35
+05:48:11,081 INF packaging: Verifying: libxml2-2.9.10-3.fc31.x86_64 1581504282 cd305ce55f7cf3e39148abdd568c90a002be05fd8f9907ffa15cd0fa4554eb27
+05:48:11,081 INF packaging: Verifying: libzstd-1.4.4-1.fc31.x86_64 1579100019 c5f9fa69e2e45127742f1c5ccccf4082bf3bdf0314dc7a9935daff05f416f63d
+05:48:11,082 INF packaging: Verifying: openssl-1:1.1.1g-1.fc31.x86_64 1587643720 3c1903d51c31c6372070df32c86f8e19f20c09c9a5cec45836d6d68de01fcecf
+05:48:11,082 INF packaging: Verifying: openssl-libs-1:1.1.1g-1.fc31.x86_64 1587643720 5db355a5c4d791faa102ae51b916a463fc04e38273b72a0569af00ce0bf7f4be
+05:48:11,083 INF packaging: Verifying: p11-kit-0.23.20-1.fc31.x86_64 1580317525 78f45e061d75f8cfa4544b3fb8d5449c79f70d0465991bbf5c3fa331d05691d6
+05:48:11,083 INF packaging: Verifying: p11-kit-trust-0.23.20-1.fc31.x86_64 1580317525 e1acdf3c599048e8f6da74450f07cbcc7a22c0ba9ddad0b389c28a20273f6a95
+05:48:11,084 INF packaging: Verifying: pam-1.3.1-21.fc31.x86_64 1576674834 6dfb5daab3317e7d5689b01e0fe154bbfc96ed02f228ee08f0e576e365a8f945
+05:48:11,084 INF packaging: Verifying: pcre-8.44-1.fc31.x86_64 1582879757 32cb165625a810061dd6c9b6e6ba4e6b704e06c651237296696e2f5fff52482a
+05:48:11,084 INF packaging: Verifying: pcre2-10.34-9.fc31.x86_64 1585728219 cbb80d27ab68adbf80fe0f359c8e2ce1e943c6a9d2b98d7ca011ce07173c18b9
+05:48:11,085 INF packaging: Verifying: pcre2-syntax-10.34-9.fc31.noarch 1585728230 c046a049fb60eee6a95e5fb873405aa5656cc559c6c4bb17d6c7fce9b1fa9c5a
+05:48:11,085 INF packaging: Verifying: python-pip-wheel-19.1.1-8.fc31.noarch 1587476617 482013dfc169be72202047a80c344f907ff142841478d4aaf711218d5a41ab32
+05:48:11,086 INF packaging: Verifying: python-setuptools-wheel-41.6.0-1.fc31.noarch 1581518261 3e718f8b77980808c70d69f5b937ecdeb036d9813aafad2e19709545cad08102
+05:48:11,086 INF packaging: Verifying: python3-3.7.7-1.fc31.x86_64 1584092333 68ebb4b8e8e54405d9e11dc0e3d494c2d8536356ee5509cd30360bcb8436180f
+05:48:11,086 INF packaging: Verifying: python3-dnf-4.2.21-1.fc31.noarch 1585771821 f9f74e1e9a8ed303477595183b86e0909b9ec0f6fa6ee4fca71df25a722836a3
+05:48:11,087 INF packaging: Verifying: python3-hawkey-0.47.0-1.fc31.x86_64 1585765126 e7d47f96b1b544e13f69b2adcbfcc6de9965df924fdbcd38f966662d78243ce6
+05:48:11,087 INF packaging: Verifying: python3-libcomps-0.1.15-1.fc31.x86_64 1585745825 3c6a7b7a57faf14becd03a4f65b54339e2cfc3a4284b95c6e77c7278ed7a8568
+05:48:11,088 INF packaging: Verifying: python3-libdnf-0.47.0-1.fc31.x86_64 1585765126 6ca4d1b9bb18fd047947228e973e7ea9a6b9e8a325b0287bb08ee0b9469fd2b2
+05:48:11,088 INF packaging: Verifying: python3-libs-3.7.7-1.fc31.x86_64 1584092333 2e714ac69aabb5b257256e4d6fe00a807fac6844c4aaf174024428ecd3bb19a5
+05:48:11,089 INF packaging: Verifying: python3-rpm-4.15.1-2.fc31.x86_64 1588579365 572a453a84b1bf7dc1455c475f8f7c3879b074f92a4a4dc42c4e5ef736cbd306
+05:48:11,089 INF packaging: Verifying: rpm-4.15.1-2.fc31.x86_64 1588579365 59cc900e09249e045dc01122d7cca810d42b65a0e3f20bbfe3820000935f127f
+05:48:11,089 INF packaging: Verifying: rpm-build-libs-4.15.1-2.fc31.x86_64 1588579365 efae4780a506e1289640cf1feba34ce1542e476898af567082f4f78889eedd18
+05:48:11,090 INF packaging: Verifying: rpm-libs-4.15.1-2.fc31.x86_64 1588579365 3a3aea58b1ed5054986f0eee937f436875449beda2c7afd10d135f292f46338a
+05:48:11,090 INF packaging: Verifying: rpm-sign-libs-4.15.1-2.fc31.x86_64 1588579365 406b0d9698846f18818c2141d53c37c4ad54158bed32d6812b8130b0795b47a7
+05:48:11,091 INF packaging: Verifying: setup-2.13.6-1.fc31.noarch 1570614322 777f3f96f1014722e9783b314385e336ee200b66ed28eaee75aaa34b3489392d
+05:48:11,091 INF packaging: Verifying: shadow-utils-2:4.6-18.fc31.x86_64 1585651487 d110ff17f42ecc636cff0d50fb6e6f92383942a3abcf08c7a6684bc5291bcf2d
+05:48:11,091 INF packaging: Verifying: sqlite-libs-3.30.0-1.fc31.x86_64 1570445722 5c6790b7b9c6182added9d9a41c08ea1480c07222d2e4120f0d04b2ee908e500
+05:48:11,092 INF packaging: Verifying: sssd-client-2.2.3-13.fc31.x86_64 1582777853 d4f9e4a26da7cd906c3f84b35204dc03c6adac62c97642b56554d340cf45cb3f
+05:48:11,092 INF packaging: Verifying: sudo-1.9.0-0.1.b4.fc31.x86_64 1585301782 4022e2350fe73835009a08dc6f93d80b3671c6340e622cb023a8a083a291db9c
+05:48:11,093 INF packaging: Verifying: systemd-243.8-1.fc31.x86_64 1585235755 3babb2f6a6be8f530b434fd098af838b3cf7dce2bf7016a897c120d098ec0be6
+05:48:11,093 INF packaging: Verifying: systemd-libs-243.8-1.fc31.x86_64 1585235755 a685677a56e450282db0f6423e2ce9b8d93bc9f09a52f29fa836b2639704d0c2
+05:48:11,094 INF packaging: Verifying: systemd-pam-243.8-1.fc31.x86_64 1585235755 2a0785e30f319729547a1c030df206829e11fcd615d9b84c3d83c466621bf2b9
+05:48:11,094 INF packaging: Verifying: systemd-rpm-macros-243.8-1.fc31.noarch 1585235794 4e77cd70a56884aa7910229203e249a83d045eeb19b9a8c156b64c30c2c1fde1
+05:48:11,095 INF packaging: Verifying: tzdata-2019c-2.fc31.noarch 1579484327 bf4871693810b70824be29745e06731121370e339215781102d4418846810c89
+05:48:11,095 INF packaging: Verifying: util-linux-2.34-4.fc31.x86_64 1576514871 e7895b7c8ceb4144871585670e630a8391ab87da59766da08dcbed7b84175fe0
+05:48:11,096 INF packaging: Verifying: vim-minimal-2:8.2.694-1.fc31.x86_64 1588591402 2eb99d5bdca51d96d41507dd2e2d8ccae58d46fe9dfc6f96107e9c03661b62e0
+05:48:11,096 INF packaging: Verifying: yum-4.2.21-1.fc31.noarch 1585771821 2f30d608c28964ed70126038c1524ee89f6a09048cbe0c893e2aeeaca4c8c51d
+05:48:11,096 INF packaging: Verifying: zchunk-libs-1.1.5-1.fc31.x86_64 1579384610 de4c0a701268fb1916e4e20cc785b6d0c840da2bce1681bed5bd6fcc18a217ba
+05:48:11,097 INF packaging: Verifying: zlib-1.2.11-20.fc31.x86_64 1572358039 28aca2b4c94a494e5f02bd17f8cd146ad549ec443d8ea0dbdc0a1092daf48f4f
+05:48:11,097 INF packaging: Cleaning up downloaded packages: /tmp/dnf.package.cache
+05:48:11,101 Level 8 dnf: Cleaning up.
+05:48:11,101 INF dnf: The downloaded packages were saved in cache until the next successful transaction.
+05:48:11,101 INF dnf: You can remove cached packages by executing 'dnf clean packages'.
