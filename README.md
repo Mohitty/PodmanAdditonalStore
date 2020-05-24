@@ -15,5 +15,5 @@ The basic structure of the directories is:
   * add the path of ./additonalstore_overlay or ./additonalstore_vfs to the additionalimagestore field in the file, depending on the default driver.
   * change the value of driver field to overlay or vfs accordingly.
 * Run command `sudo podman images` to list images. This should output fedora image as an entry from additonal store.
-* Run command `sudo podman run -it docker.io/library/fedora /bash/bin` . This will start the container and give an interactive shell.
+* Run command `sudo podman run -it docker.io/library/fedora /bin/bash` . This will start the container and give an interactive shell.
 * Run command `sudo podman ps` . This should list the above running container.
