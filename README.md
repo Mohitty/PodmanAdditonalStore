@@ -36,74 +36,143 @@ Storage
 We will discuss the storage structure for overlay driver only in this post. Let’s look at an example structure of /var/lib/containers/storage (the digest values are shown only upto 6 hexadecimal digits for compactness). The following store contains the ubuntu:latest image pulled from docker hub.
 
 /var/lib/containers/storage
+
 ├── libpod
+
 │ └── bolt_state.db
+
 ├── mounts
+
 ├── overlay
+
 │ ├── 2ce3c1
+
 │ │ ├── diff
+
 │ │ ├── empty
+
 │ │ ├── link
+
 │ │ ├── merged
+
 │ │ └── work
+
 │ ├── 4cc8a6
+
 │ │ ├── diff
+
 │ │ ├── link
+
 │ │ ├── lower
+
 │ │ ├── merged
+
 │ │ └── work
+
 │ ├── 720c33
+
 │ │ ├── diff
+
 │ │ ├── link
+
 │ │ ├── lower
+
 │ │ ├── merged
+
 │ │ └── work
+
 │ ├── compat214010866
+
 │ │ ├── lower1
+
 │ │ ├── lower2
+
 │ │ ├── merged
+
 │ │ ├── upper
+
 │ │ └── work
+
 │ ├── compat567238191
+
 │ │ ├── lower1
+
 │ │ ├── lower2
+
 │ │ ├── merged
+
 │ │ ├── upper
+
 │ │ └── work
+
 │ ├── da0180
+
 │ │ ├── diff
+
 │ │ ├── link
+
 │ │ ├── lower
+
 │ │ ├── merged
+
 │ │ └── work
+
 │ └── l
+
 │ │ ├── DCA3F65L7EAFZTJ55MTGPQMDSM -> ../4cc8a6/diff
+
 │ │ ├── JJG53NDRFWK4UKBVGWDMYNB3L3 -> ../da0180/diff
+
 │ │ ├── NQZ7WILONDZ22PEBUGEZ3MOFID -> ../720c33/diff
+
 │ │ └── VAEMYZJDRVJZDW6ZIJO76NEVCQ -> ../2ce3c1/diff
+
 ├── overlay-containers
+
 │ ├── containers.json
+
 │ └── containers.lock
+
 ├── overlay-images
+
 │ ├── 4e2eef
+
 │ │ ├── =bWFY3YTU=
+
 │ │ ├── =bWFZTU=
+
 │ │ ├── =c2hM2M=
+
 │ │ ├── =c2lZTU=
+
 │ │ └── manifest
+
 │ ├── images.json
+
 │ └── images.lock
+
 ├── overlay-layers
+
 │ ├── 2ce3c1.tar-split.gz
+
 │ ├── 4cc8a6.tar-split.gz
+
 │ ├── 720c33.tar-split.gz
+
 │ ├── da0180.tar-split.gz
+
 │ ├── layers.json
+
 │ └── layers.lock
+
 ├── storage.lock
+
 ├── tmp
+
 ├── userns.lock
+
 └── volumes
+
 
 We will discuss the role of directories marked bold in the above directory tree.
 
