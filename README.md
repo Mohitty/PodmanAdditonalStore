@@ -232,38 +232,71 @@ The reason I explained the content of only a few directories present in var/lib/
 Hence an additional store containing the ubuntu image would look like:
 
 /path/to/additional/store
+
 ├── overlay
+
 │ ├── 2ce3c1
+
 │ │ ├── diff
+
 │ │ ├── link
+
 │ ├── 4cc8a6
+
 │ │ ├── diff
+
 │ │ ├── link
+
 │ │ ├── lower
+
 │ ├── 720c33
+
 │ │ ├── diff
+
 │ │ ├── link
+
 │ │ ├── lower
+
 │ ├── da0180
+
 │ │ ├── diff
+
 │ │ ├── link
+
 │ │ ├── lower
+
 │ └── l
+
 │ │ ├── DCA3F65L7EAFZTJ55MTGPQMDSM -> ../4cc8a6/diff
+
 │ │ ├── JJG53NDRFWK4UKBVGWDMYNB3L3 -> ../da0180/diff
+
 │ │ ├── NQZ7WILONDZ22PEBUGEZ3MOFID -> ../720c33/diff
+
 │ │ └── VAEMYZJDRVJZDW6ZIJO76NEVCQ -> ../2ce3c1/diff
+
 ├── overlay-images
+
 │ ├── 4e2eef
+
 │ │ ├── =bWFY3YTU=
+
 │ │ ├── =bWFZTU=
+
 │ │ ├── =c2hM2M=
+
 │ │ ├── =c2lZTU=
+
 │ │ └── manifest
+
 │ ├── images.json
+
 │ └── images.lock
+
 ├── overlay-layers
+
 │ ├── layers.json
+
 │ └── layers.lock
 
 Note the following changes from the read-write store: We don’t have upper, merge and work directories in overlay/<digest>/ directory any more. This is because it is a read only store, hence we can’t use them with overlay. Instead podman mounts these layers in the read-write store’s overlay directory.
